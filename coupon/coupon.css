@@ -28,6 +28,11 @@ body {
   margin: 0;
 }
 
+::before, ::after {
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
 #root {
   background-color: white;
   min-height: 100%;
@@ -268,6 +273,20 @@ div.MainNavRight-Mypage {
   border-bottom: 1px solid rgb(238, 238, 238);
 }
 
+.Mobile-Coupon > header {
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.54px;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 8px 10px 10px;
+}
+
 div.Content {
   padding: 50px 20px 20px;
   margin: 0px auto;
@@ -374,4 +393,151 @@ hr.Line {
 
 div.Possession {
   padding: 0px 20px;
+}
+
+lable.CouponListTitle {
+  display: block;
+  margin-bottom: 20px;
+  color: rgb(51, 51, 51);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  text-align: left;
+}
+
+div.GroupWrapper {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+div.CouponWrapper {
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  max-width: 375px;
+  height: 144px;
+  margin-bottom: 14px;
+  border-radius: 5px;
+}
+
+div.CouponWrapper::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 72px;
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgb(221, 221, 221);
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+div.ContentWrapper {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: calc(100% - 82px);
+  height: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  border-top: 1px solid rgb(221, 221, 221);
+  border-bottom: 1px solid rgb(221, 221, 221);
+  border-left: 1px solid rgb(221, 221, 221);
+  border-image: initial;
+  border-right: none;
+}
+
+.Possession div.Description {
+  color: rgb(0, 0, 0);
+}
+
+div.PriceWithExpireWrapper {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  height: 22px;
+  font-size: 10px;
+}
+
+div.DiscountPrice {
+  align-self: flex-end;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 24px;
+  color: rgb(122, 41, 250);
+  white-space: nowrap;
+}
+
+div.ExpireDate {
+  color: rgb(119, 119, 119);
+  font-size: 10px;
+  line-height: 13px;
+  word-break: keep-all;
+}
+
+div.CouponNameWrapper {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 206px;
+  height: 32px;
+  margin-top: 6px;
+}
+
+div.CouponName {
+  display: -webkit-box;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: rgb(0, 0, 0);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+div.ConditionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+div.Condition {
+  color: rgb(119, 119, 119);
+  font-size: 10px;
+  line-height: 13px;
+}
+
+div.CutoutWrapper {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 80px;
+  border-width: 1px;
+  border-style: solid solid solid dashed;
+  border-color: rgb(221, 221, 221);
+  border-image: initial;
+  border-radius: 5px;
+}
+
+div.CouponWrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  right: 72px;
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgb(221, 221, 221);
+  background-color: white;
+  transform: rotate(45deg);
 }
