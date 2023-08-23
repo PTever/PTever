@@ -371,3 +371,7 @@ hr.Line {
     border-right: none;
     border-bottom: none;
 }
+
+div.Possession {
+  padding: 0px 20px;
+}
