@@ -28,7 +28,7 @@ body {
     margin: 0;
 }
 
-#root {
+div.root {
     background-color: white;
     min-height: 100%;
     min-width: 100%;
@@ -264,3 +264,19 @@ div.MainNavRight-Mypage {
     height: 51px;
 }
 
+/* 미디어쿼리 */
+.pc {
+    display: block;
+}
+.mobile {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .pc {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+}
