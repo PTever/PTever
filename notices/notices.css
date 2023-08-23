@@ -163,10 +163,9 @@ hr {
     margin-inline-end: auto;
 }
 
+/* 공지사항 css */
 
-/* 자주 묻는 질문 css */
-
-div.FrequentPageWrapper {
+.NoticesWrapper {
     display: flex;
     flex-flow: column;
     align-content: flex-start;
@@ -177,44 +176,11 @@ div.FrequentPageWrapper {
     min-height: 1px;
 }
 
-.FrequentPageTitle {
+.NoticesPagesTitle {
     margin: 30px 0px 20px;
     line-height: 24px;
     font-size: 24px;
     font-weight: bold;
-    font-weight: 700;
-}
-
-:-webkit-any(article, aside, nav, section) h1 {
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-}
-
-.FrequentSearchWrapper {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    line-height: 24px;
-    border-bottom: 1px solid black;
-    padding: 18px 0px;
-    font-size: 14px;
-}
-
-.FrequentSearchIcon {
-    -webkit-box-flex: 0;
-    flex: 0 0 auto;
-    margin-right: 10px;
-    width: 24px;
-    height: 24px;
-
-}
-
-.FrequentSearchWrapper > input {
-    -webkit-box-flex: 1;
-    flex: 1 1 auto;
-    height: 24px;
 }
 
 .TabLabelsWrapper {
@@ -238,13 +204,23 @@ div.FrequentPageWrapper {
     cursor: pointer;
 }
 
-.FAQListWrapper {
+.FadeWrapper {
+    opacity: 1;
+    display: block;
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out 0s;
+    min-width: 0px;
+    min-height: 1px;
+}
+
+.NoticeListWrapper {
     margin: 0px;
     padding: 0px;
     list-style: none;
 }
 
-.FAQ-Element {
+.Notice-TitleWrapper {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -256,6 +232,37 @@ div.FrequentPageWrapper {
     border-bottom: 1px solid rgb(230, 230, 230);
 }
 
+.Notice-Badge {
+    margin-left: 0px;
+    margin-right: 21px;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 0px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgb(51, 151, 255);
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+
+.Notice-Title {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+}
+
+.Notice-CreatedDateTime {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    margin-left: 10px;
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+    font-weight: normal;
+}
+
 .PaginationWrapper {
     display: flex;
     -webkit-box-pack: center;
@@ -265,8 +272,6 @@ div.FrequentPageWrapper {
     width: 100%;
     padding: 30px 0px;
     background-color: white;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 .Pagination-PrevButtonWrapper {
@@ -361,75 +366,4 @@ button:disabled {
     -webkit-box-align: center;
     align-items: center;
     outline: none;
-}
-
-.LineUnderPagination {
-    height: 1px;
-    background-color: rgb(255, 255, 255);
-    margin: 20px 0px;
-    border-top: 1px solid rgb(238, 238, 238);
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
-}
-
-.QuestionArea {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    padding-bottom: 60px;
-}
-
-.LinkToPersonalFAQ {
-    cursor: pointer;
-    border: 1px solid rgb(0, 117, 239);
-    background: rgb(255, 255, 255);
-    color: rgb(0, 117, 239);
-    display: inline-flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    font-weight: 500;
-    letter-spacing: -0.03em;
-    text-align: center;
-    white-space: nowrap;
-    width: auto;
-    border-radius: 10px;
-    padding: 10px 14px;
-    font-size: 12px;
-    line-height: 16px;
-}
-
-.FAQ-Element-Mobile {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    min-height: 60px;
-    line-height: 18px;
-    padding: 20px 0px;
-    font-size: 12px;
-    cursor: pointer;
-    border-bottom: 1px solid rgb(230, 230, 230);
-}
-
-/* 미디어 쿼리 */
-.pc {
-    display: block;
-}
-
-.mobile {
-    display: none;
-}
-
-@media (max-width: 768px){
-    .pc {
-        display: none;
-    }
-    .mobile {
-        display: block;
-    }
 }
