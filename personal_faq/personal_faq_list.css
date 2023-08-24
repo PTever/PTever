@@ -163,10 +163,31 @@ hr {
     margin-inline-end: auto;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
 
-/* 자주 묻는 질문 css */
+p, label {
+    margin: 0px;
+}
 
-div.FrequentPageWrapper {
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+b, strong {
+    font-weight: bolder;
+}
+
+/* 1:1문의 목록 css */
+
+div.PersonalHelpPageWrapper {
     display: flex;
     flex-flow: column;
     align-content: flex-start;
@@ -177,7 +198,7 @@ div.FrequentPageWrapper {
     min-height: 1px;
 }
 
-.FrequentPageTitle {
+.PersonalHelpPageTitle {
     margin: 30px 0px 20px;
     line-height: 24px;
     font-size: 24px;
@@ -185,63 +206,53 @@ div.FrequentPageWrapper {
     font-weight: 700;
 }
 
-:-webkit-any(article, aside, nav, section) h1 {
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
+.DoHelpButtonWrapper {
+    display: flex;
+    justify-content: right;
+    height: 70px;
 }
 
-.FrequentSearchWrapper {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    width: 100%;
-    height: 60px;
-    line-height: 24px;
-    border-bottom: 1px solid black;
-    padding: 18px 0px;
+.DoPersonalHelpButton {
+    margin: 4px 16px 20px;
+    width: 130px;
+    height: 50px;
+    line-height: normal;
+    padding: 0px;
+    background-color: transparent;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 5px;
     font-size: 14px;
 }
 
-.FrequentSearchIcon {
-    -webkit-box-flex: 0;
-    flex: 0 0 auto;
-    margin-right: 10px;
-    width: 24px;
-    height: 24px;
-
-}
-
-.FrequentSearchWrapper > input {
-    -webkit-box-flex: 1;
-    flex: 1 1 auto;
-    height: 24px;
-}
-
-.TabLabelsWrapper {
-    border-bottom: 1px solid rgb(238, 238, 238);
-    padding: 20px 0px;
-    white-space: nowrap;
-    overflow: auto;
-}
-
-.TabLabelsWrapper > span {
-    margin-right: 20px;
-}
-
-.TabLabel-Selected {
-    color: rgb(51, 151, 255);
+.DoPersonalHelpButton-Mobile {
+    margin: 15px 10px 20px;
+    width: 100px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: transparent;
+    text-align: center;
     cursor: pointer;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 5px;
+    font-size: 14px;
 }
 
-.TabLabel-Unselected {
-    color: black;
-    cursor: pointer;
+:-webkit-any(article, aside, nav, section) h1 {
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
 }
 
 .FAQListWrapper {
     margin: 0px;
     padding: 0px;
     list-style: none;
+}
+
+.FAQListWrapper > :first-child {
+    border-top: 1px solid #000;
 }
 
 .FAQ-Element {
@@ -266,6 +277,40 @@ div.FrequentPageWrapper {
     font-size: 12px;
     cursor: pointer;
     border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.FAQ-AnswerBadge {
+    margin-left: 0px;
+    margin-right: 21px;
+    width: 55px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 0px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgb(51, 151, 255);
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+
+.FAQ-AnswerBadge-Mobile {
+    margin-left: 0px;
+    margin-right: 10px;
+    width: 55px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 0px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgb(51, 151, 255);
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
 }
 
 .PaginationWrapper {
@@ -383,37 +428,6 @@ button:disabled {
     border-left: none;
     border-right: none;
     border-bottom: none;
-}
-
-.QuestionArea {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    align-items: center;
-    padding-bottom: 60px;
-}
-
-.LinkToPersonalFAQ {
-    cursor: pointer;
-    border: 1px solid rgb(0, 117, 239);
-    background: rgb(255, 255, 255);
-    color: rgb(0, 117, 239);
-    display: inline-flex;
-    -webkit-box-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    align-items: center;
-    box-sizing: border-box;
-    font-weight: 500;
-    letter-spacing: -0.03em;
-    text-align: center;
-    white-space: nowrap;
-    width: auto;
-    border-radius: 10px;
-    padding: 10px 14px;
-    font-size: 12px;
-    line-height: 16px;
 }
 
 /* 미디어 쿼리 */
