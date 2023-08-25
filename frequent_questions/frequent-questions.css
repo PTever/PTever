@@ -7,7 +7,8 @@
     font-weight: bold;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     font-size: 14px;
     color: black;
@@ -65,7 +66,7 @@ input {
 
 section {
     display: block;
-    font-family: 'SUIT', sans-serif;
+    font-family: "SUIT", sans-serif;
 }
 
 h1 {
@@ -85,20 +86,36 @@ img {
     overflow: clip;
 }
 
-audio, canvas, iframe, img, svg, video {
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
     vertical-align: middle;
 }
 
-a, area, button, input, label, select, textarea, [tabindex] {
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
     -ms-touch-action: manipulation;
     touch-action: manipulation;
 }
 
-button, input {
+button,
+input {
     overflow: visible;
 }
 
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
     background-color: transparent;
     border-style: none;
     color: inherit;
@@ -106,15 +123,21 @@ button, input, select, textarea {
     margin: 0;
 }
 
-button, select {
+button,
+select {
     text-transform: none;
 }
 
-button, html [type="button"], [type="reset"], [type="submit"] {
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
     -webkit-appearance: button;
 }
 
-input:not([type="range"]):not([type="color"]):not([type="button"]):not([type="reset"]):not([type="submit"]):not([type="file"]) {
+input:not([type="range"]):not([type="color"]):not([type="button"]):not([type="reset"]):not([type="submit"]):not(
+        [type="file"]
+    ) {
     writing-mode: horizontal-tb !important;
 }
 
@@ -136,7 +159,18 @@ li {
     text-align: -webkit-match-parent;
 }
 
-article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
     display: block;
 }
 
@@ -161,6 +195,30 @@ hr {
     margin-block-end: 0.5em;
     margin-inline-start: auto;
     margin-inline-end: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+p,
+label {
+    margin: 0px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+b,
+strong {
+    font-weight: bolder;
 }
 
 
