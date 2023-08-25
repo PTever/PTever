@@ -274,6 +274,42 @@ div.FrequentPageWrapper {
     border-bottom: 1px solid rgb(230, 230, 230);
 }
 
+.FAQ-ReplyWrapper {
+    border: none;
+    display: none;
+    width: 100%;
+    min-height: 84px;
+    padding: 20px;
+    background-color: rgb(239, 247, 255);
+    color: rgb(74, 74, 74);
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.FAQ-ReplyWrapper * {
+    width: 100%;
+    line-height: 10px;
+    font-family: inherit;
+}
+
+.FAQ-ReplyWrapper-Mobile {
+    border: none;
+    display: none;
+    width: 100%;
+    min-height: 84px;
+    padding: 20px;
+    background-color: rgb(239, 247, 255);
+    color: rgb(74, 74, 74);
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.FAQ-ReplyWrapper-Mobile * {
+    width: 100%;
+    
+    font-family: inherit;
+}
+
 .PaginationWrapper {
     display: flex;
     -webkit-box-pack: center;
