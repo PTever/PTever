@@ -292,6 +292,7 @@ p, label {
 .Notice-Title {
     -webkit-box-flex: 1;
     flex: 1 1 auto;
+    font-weight: bold;
 }
 
 .Notice-CreatedDateTime {
@@ -321,6 +322,8 @@ p, label {
 }
 
 .Notice-ContentWrapper-Mobile {
+    border: none;
+    display: none;
     width: 100%;
     min-height: 84px;
     padding: 20px;
