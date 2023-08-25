@@ -150,8 +150,8 @@ div.IconWrapper {
 
 img {
     border-style: none;
-    overflow-clip-margin: content-box;
-    overflow: clip;
+    /* overflow-clip-margin: content-box;
+    overflow: clip; */
     vertical-align: middle;
 }
 
@@ -266,3 +266,194 @@ div.MainNavRight-Mypage {
 
 /* ============================================ */
 
+
+.page-Wrapper {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+
+.event-Page-Title {
+    margin: 30px 0px 20px;
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.event-Fade-Wrapper {
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out 0s;
+    min-width: 0px;
+    min-height: 1px;
+}
+
+.eventList-Page-Wrapper {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.event-Entity-Wrapper {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-height: 60px;
+    line-height: 24px;
+    padding: 18px 0px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.event-Badge {
+    margin-left: 0px;
+    margin-right: 21px;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 0px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgb(160, 130, 250);
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+
+.noticeEntity-Title {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+}
+
+.noticeEntity-Date {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    margin-left: 10px;
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/* .pagination-Wrapper {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 30px 0px;
+    background-color: white;
+}
+
+.pagination-Btn-Group {
+    display: flex;
+    margin-right: 10px;
+}
+
+button {
+    cursor: not-allowed;
+    touch-action: manipulation;
+    -webkit-appearance: button;
+    text-transform: none;
+    border-style: none;
+    color: inherit;
+    margin: 0;
+}
+
+
+button, input {
+    overflow: visible;
+}
+.page-Btn {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+}
+
+.pagination-Btn-Group-Icon {
+    transform: rotate(180deg);
+}
+
+.page-Btn_Number {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    color: rgb(51, 151, 255);
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+}
+
+.pagination-Next-Btn {
+    display: flex;
+    margin-left: 10px;
+}
+
+.pagination-Next-Btn {
+    display: flex;
+    margin-left: 10px;
+}
+
+.change-Page-Btn {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+}
+
+.Next-Pagination-Btn-Group-Icon  {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+} */
