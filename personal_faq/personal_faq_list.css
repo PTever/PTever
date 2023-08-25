@@ -226,6 +226,10 @@ div.PersonalHelpPageWrapper {
     font-size: 14px;
 }
 
+.DoPersonalHelpButton:hover {
+    border: 1px solid rgb(51, 151, 255);
+}
+
 .DoPersonalHelpButton-Mobile {
     margin: 15px 10px 20px;
     width: 100px;
@@ -238,6 +242,10 @@ div.PersonalHelpPageWrapper {
     border: 1px solid rgb(238, 238, 238);
     border-radius: 5px;
     font-size: 14px;
+}
+
+.DoPersonalHelpButton-Mobile:hover {
+    border: 1px solid rgb(51, 151, 255);
 }
 
 :-webkit-any(article, aside, nav, section) h1 {
