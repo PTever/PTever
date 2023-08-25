@@ -224,16 +224,22 @@ div.FrequentPageWrapper {
     overflow: auto;
 }
 
-.TabLabelsWrapper > span {
+.TabLabel-Selected > a, .TabLabel-Unselected > a {
     margin-right: 20px;
 }
 
-.TabLabel-Selected {
+.TabLabelsWrapper a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
+.TabLabel-Selected, .TabLabel-Selected a {
     color: rgb(51, 151, 255);
     cursor: pointer;
 }
 
-.TabLabel-Unselected {
+.TabLabel-Unselected, .TabLabel-Unselected a {
     color: black;
     cursor: pointer;
 }
