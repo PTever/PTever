@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피테버(PTever)</title>
+    <!-- SUIT 폰트 링크입니다. 프립과 동일한 폰트입니다. -->
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <style>
+        body {font-family: 'SUIT', sans-serif;}
+    </style>
+    <link rel="stylesheet" href="./mainpage.css">
+</head>
+<body>
+    <div class="root pc">
+        <div class="RootWrapper">
+            <div class="MainPageWrapper">
+                <div class="Main-Wrapper">
+                    <!-- 메인 슬라이드 배너입니다. -->
+                    <div class="Main-Banner-Wrapper">
+                        <div class="Main-Banner-FadeWrapper">
+                            <div class="Main-SlideBannerWrapper">
+                                <div class="ImageSlider" dir="ltr">
+                                    <img class="ImageSlider-Arrow ImageSlider-PrevArrow" alt="왼쪽으로 이동" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E %3Cpath fill='none' fill-rule='evenodd' stroke='%23FFF' stroke-width='2' d='M21 17l8 8.014L21.028 33'/%3E %3C/svg%3E">
+                                    <div class="ImageSlider-ImageTrack">
+                                        <div><img src="./bannerImages/mainbanner_top1.png" alt="메인배너1"></div>
+                                        <div><img src="./bannerImages/mainbanner_top2.png" alt="메인배너2"></div>
+                                        <div><img src="./bannerImages/mainbanner_top3.png" alt="메인배너3"></div>
+                                        <div><img src="./bannerImages/mainbanner_top4.png" alt="메인배너4"></div>
+                                        <div><img src="./bannerImages/mainbanner_top5.png" alt="메인배너5"></div>
+                                        <div><img src="./bannerImages/mainbanner_top6.png" alt="메인배너6"></div>
+                                        <div><img src="./bannerImages/mainbanner_top7.png" alt="메인배너7"></div>
+                                        <div><img src="./bannerImages/mainbanner_top8.png" alt="메인배너8"></div>
+                                        <div><img src="./bannerImages/mainbanner_top9.png" alt="메인배너9"></div>
+                                        <div><img src="./bannerImages/mainbanner_top10.png" alt="메인배너10"></div>
+                                    </div>
+                                    <img class="ImageSlider-Arrow ImageSlider-NextArrow" alt="오른쪽으로 이동" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 50 50'%3E %3Cpath fill='none' fill-rule='evenodd' stroke='%23FFF' stroke-width='2' d='M21 17l8 8.014L21.028 33'/%3E %3C/svg%3E">
+                                    <button type="button" class="MainBanner-InfoButton">
+                                        <span class="MainBanner-CurrentCount">1</span>
+                                        / 10
+                                        <img alt="배너 더보기버튼" class="MainBanner-InfoButtonImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='7' fill='none' viewBox='0 0 8 7'%3E %3Cpath fill='%23fff' d='M3 0H5V7H3z'/%3E %3Cpath fill='%23fff' d='M0.5 4.5H2.5V11.5H0.5z' transform='rotate(-90 .5 4.5)'/%3E %3C/svg%3E">
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 슬라이드 배너의 버튼 클릭 시 표시됩니다. -->
+                    <div class="FullScreenWrapper">
+                        <div class="MainBannerViewer">
+                            <header class="MainBannerViewer-Header">
+                                <h2 class="MainBannerViewer-HeaderTitle">
+                                    피테버 추천 혜택
+                                </h2>
+                                <button type="button" class="MainBannerViewer-Exit">
+                                    <img alt="배너 더보기 종료버튼" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32'%3E %3Cpath fill='%23fff' fill-rule='evenodd' d='M25.407 7.907c.39-.39.39-1.024 0-1.414-.39-.39-1.023-.39-1.414 0l-8.043 8.043-8.043-8.043c-.39-.39-1.023-.39-1.414 0-.39.39-.39 1.024 0 1.414l8.043 8.043-8.043 8.043c-.39.39-.39 1.024 0 1.414.39.39 1.024.39 1.414 0l8.043-8.043 8.043 8.043c.39.39 1.024.39 1.414 0 .39-.39.39-1.024 0-1.414l-8.043-8.043 8.043-8.043z' clip-rule='evenodd'/%3E %3C/svg%3E">
+                                </button>
+                            </header>
+                            <div class="MainBannerViewer-Container">
+                                <div>
+                                    <a href="" class="MainBannerViewer-ContainerA">
+                                        <div class="MainBannerViewer-ImageWrapper">
+                                            <img alt="광고배너" src="./bannerImages/mainbanner_top1.png">
+                                        </div>
+                                    </a>
+                                    <a href="" class="MainBannerViewer-ContainerA">
+                                        <div class="MainBannerViewer-ImageWrapper">
+                                            <img alt="광고배너" src="./bannerImages/mainbanner_top2.png">
+                                        </div>
+                                    </a>
+                                    <a href="" class="MainBannerViewer-ContainerA">
+                                        <div class="MainBannerViewer-ImageWrapper">
+                                            <img alt="광고배너" src="./bannerImages/mainbanner_top3.png">
+                                        </div>
+                                    </a>
+                                    <a href="" class="MainBannerViewer-ContainerA">
+                                        <div class="MainBannerViewer-ImageWrapper">
+                                            <img alt="광고배너" src="./bannerImages/mainbanner_top4.png">
+                                        </div>
+                                    </a>
+                                    <a href="" class="MainBannerViewer-ContainerA">
+                                        <div class="MainBannerViewer-ImageWrapper">
+                                            <img alt="광고배너" src="./bannerImages/mainbanner_top5.png">
+                                        </div>
+                                    </a>
+                                    <a href="" class="MainBannerViewer-ContainerA">
+                                        <div class="MainBannerViewer-ImageWrapper">
+                                            <img alt="광고배너" src="./bannerImages/mainbanner_top6.png">
+                                        </div>
+                                    </a>
+                                    <a href="" class="MainBannerViewer-ContainerA">
+                                        <div class="MainBannerViewer-ImageWrapper">
+                                            <img alt="광고배너" src="./bannerImages/mainbanner_top7.png">
+                                        </div>
+                                    </a>
+                                    <a href="" class="MainBannerViewer-ContainerA">
+                                        <div class="MainBannerViewer-ImageWrapper">
+                                            <img alt="광고배너" src="./bannerImages/mainbanner_top8.png">
+                                        </div>
+                                    </a>
+                                    <a href="" class="MainBannerViewer-ContainerA">
+                                        <div class="MainBannerViewer-ImageWrapper">
+                                            <img alt="광고배너" src="./bannerImages/mainbanner_top9.png">
+                                        </div>
+                                    </a>
+                                    <a href="" class="MainBannerViewer-ContainerA">
+                                        <div class="MainBannerViewer-ImageWrapper">
+                                            <img alt="광고배너" src="./bannerImages/mainbanner_top10.png">
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- shortcut 리스트입니다. -->
+                    <div class="ShortcutListWrapper">
+                        <div class="Shortcut-FadeWrapper">
+                            <div class="Shortcut-NodelistWrapper">
+                                <a href="">
+                                    <div class="Shortcut-ItemWrapper">
+                                        <div class="Shortcut-ImageWrapper">
+                                            <div class="Shortcut-Fadewrapper">
+                                                <div class="Ratio" display="block">
+                                                    <div class="RatioRatio">
+                                                        <div class="RatioContent">
+                                                            <img src="./shortcutIcons/shortcutIcon_1.png" alt="강의" width="60" height="60">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span>강의</span>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="Shortcut-ItemWrapper">
+                                        <div class="Shortcut-ImageWrapper">
+                                            <div class="Shortcut-Fadewrapper">
+                                                <div class="Ratio" display="block">
+                                                    <div class="RatioRatio">
+                                                        <div class="RatioContent">
+                                                            <img src="./shortcutIcons/shortcutIcon_2.png" alt="쇼핑몰" width="60" height="60">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span>쇼핑몰</span>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="Shortcut-ItemWrapper">
+                                        <div class="Shortcut-ImageWrapper">
+                                            <div class="Shortcut-Fadewrapper">
+                                                <div class="Ratio" display="block">
+                                                    <div class="RatioRatio">
+                                                        <div class="RatioContent">
+                                                            <img src="./shortcutIcons/shortcutIcon_3.png" alt="커뮤니티" width="60" height="60">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span>커뮤니티</span>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="Shortcut-ItemWrapper">
+                                        <div class="Shortcut-ImageWrapper">
+                                            <div class="Shortcut-Fadewrapper">
+                                                <div class="Ratio" display="block">
+                                                    <div class="RatioRatio">
+                                                        <div class="RatioContent">
+                                                            <img src="./shortcutIcons/shortcutIcon_4.png" alt="내강의실" width="60" height="60">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span>내 강의실</span>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="Shortcut-ItemWrapper">
+                                        <div class="Shortcut-ImageWrapper">
+                                            <div class="Shortcut-Fadewrapper">
+                                                <div class="Ratio" display="block">
+                                                    <div class="RatioRatio">
+                                                        <div class="RatioContent">
+                                                            <img src="./shortcutIcons/shortcutIcon_5.png" alt="마이페이지" width="60" height="60">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span>마이페이지</span>
+                                    </div>
+                                </a>
+                                <a href="">
+                                    <div class="Shortcut-ItemWrapper">
+                                        <div class="Shortcut-ImageWrapper">
+                                            <div class="Shortcut-Fadewrapper">
+                                                <div class="Ratio" display="block">
+                                                    <div class="RatioRatio">
+                                                        <div class="RatioContent">
+                                                            <img src="./shortcutIcons/shortcutIcon_6.png" alt="장바구니" width="60" height="60">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span>장바구니</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./mainpage.js"></script>
+</html>

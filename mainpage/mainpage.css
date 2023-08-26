@@ -1,0 +1,517 @@
+/* 기본 CSS */
+* {
+    outline: none;
+    background-repeat: no-repeat;
+    font-family: inherit;
+    box-sizing: inherit;
+    font-weight: bold;
+}
+
+html,
+body {
+    width: 100%;
+    font-size: 14px;
+    color: black;
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+html {
+    display: block;
+    box-sizing: border-box;
+    cursor: default;
+    font-family: sans-serif;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+div.root {
+    background-color: white;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+div.RootWrapper {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+div {
+    display: block;
+}
+
+input {
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    border-width: 2px;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+}
+
+section {
+    display: block;
+    font-family: "SUIT", sans-serif;
+}
+
+h1 {
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+
+img {
+    border-style: none;
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex] {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+input,
+select,
+textarea {
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+    font-size: 1em;
+    margin: 0;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+}
+
+input:not([type="range"]):not([type="color"]):not([type="button"]):not([type="reset"]):not([type="submit"]):not(
+        [type="file"]
+    ) {
+    writing-mode: horizontal-tb !important;
+}
+
+input[type="text" i] {
+    padding: 1px 2px;
+}
+
+ul {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+button {
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    writing-mode: horizontal-tb !important;
+    padding-block: 1px;
+    padding-inline: 6px;
+    border-width: 2px;
+    border-image: initial;
+}
+
+hr {
+    overflow: visible;
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+p,
+label {
+    margin: 0px;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/* 메인페이지 css */
+.MainPageWrapper {
+    min-height: 1px;
+}
+
+.Main-Wrapper {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+
+.Main-Banner-Wrapper {
+    width: 100%;
+}
+
+.Main-Banner-FadeWrapper {
+    display: block;
+    opacity: 1;
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out 0s;
+    min-width: 0px;
+    min-height: 1px;
+}
+
+.Main-SlideBannerWrapper {
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.ImageSlider {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    width: 768px;
+}
+
+.ImageSlider-PrevArrow {
+    display: block;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    transform: rotate(180deg) translate(0px, 50%);
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    padding: 0;
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.ImageSlider-PrevArrow:before {
+    content: '←';
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+.ImageSlider-NextArrow {
+    display: block;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    padding: 0;
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.ImageSlider-NextArrow:before {
+    content: '→';
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+    opacity: .75;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+.ImageSlider-ImageTrack {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 9216px;
+    cursor: pointer;
+}
+
+.ImageSlider-ImageTrack div {
+    width: 768px;
+    float: left;
+}
+
+.ImageSlider-ImageTrack img {
+    width: 100%;
+}
+
+.MainBanner-InfoButton {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    right: 12px;
+    height: 28px;
+    padding: 6px 10px;
+    color: rgb(204, 204, 204);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.36px;
+    font-weight: bold;
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    bottom: 12px;
+}
+
+.MainBanner-CurrentCount {
+    color: rgb(255, 255, 255);
+    margin-right: 2px;
+}
+
+.MainBanner-InfoButtonImg {
+    margin-left: 4px;
+}
+
+.FullScreenWrapper {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 800;
+}
+
+.MainBannerViewer {
+    max-width: 768px;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+}
+
+.MainBannerViewer-Header {
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    min-height: 32px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.MainBannerViewer-HeaderTitle {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 24px;
+    letter-spacing: -0.48px;
+    font-weight: 500;
+}
+
+.MainBannerViewer-Exit {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.MainBannerViewer-Exit img {
+    width: 100%;
+}
+
+.MainBannerViewer-Container {
+    width: 100%;
+    padding: 0px;
+    overflow: auto;
+}
+
+.MainBannerViewer-ContainerA {
+    min-height: 1px;
+}
+
+.MainBannerViewer-ImageWrapper {
+    margin-bottom: 8px;
+    min-height: 1px;
+}
+
+/* shortcut 리스트 css */
+.ShortcutListWrapper {
+    margin-bottom: 12px;
+}
+
+.Shortcut-FadeWrapper {
+    display: block;
+    opacity: 1;
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out 0s;
+    min-width: 0px;
+    min-height: 1px;
+}
+
+.Shortcut-NodelistWrapper {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.Shortcut-ItemWrapper {
+    display: flex;
+    flex-direction: column;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+    width: 60px;
+    height: 83px;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(170, 170, 170);
+}
+
+.Shortcut-ImageWrapper {
+    min-height: 1px;
+}
+
+.Shortcut-ItemWrapper span {
+    white-space: nowrap;
+    letter-spacing: -0.7px;
+    margin-top: 7px;
+}
+
+.Shortcut-ItemWrapper image {
+    display: initial;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.RatioRatio {
+    height: 0px;
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+}
+
+.RatioContent {
+    height: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
