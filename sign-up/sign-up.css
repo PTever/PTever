@@ -347,20 +347,7 @@ button, input {
 }
 
 .intro-Email-Btn {
-    width: 48px;
-    height: 48px;
-    line-height: normal;
-    padding: 0px 13px;
-    background-color: rgb(255, 255, 255);
-    text-align: center;
-    cursor: pointer;
-    border: 1px solid rgb(238, 238, 238);
-    border-radius: 10px;
-    font-size: 14px;
-}
-
-.intro-Facebook-Btn {
-    width: 48px;
+    width: 120px;
     height: 48px;
     line-height: normal;
     padding: 0px 13px;
@@ -373,7 +360,7 @@ button, input {
 }
 
 .intro-To-Login-Btn {
-    width: 138px;
+    width: 120px;
     height: 48px;
     line-height: 20px;
     padding: 0px 13px;
