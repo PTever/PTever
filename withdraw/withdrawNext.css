@@ -258,8 +258,7 @@ div.HelperWrapper {
   font-size: 15px;
   line-height: 16px;
   color: rgb(51, 51, 51);
-  font-family: sans-serif;
-  
+  font-family: inherit;
 }
 
 p.Warning {
@@ -274,7 +273,7 @@ p.FinalAgreement {
   font-size: 15px;
   line-height: 16px;
   color: rgb(122, 41, 250);
-  font-family: sans-serif;
+  font-family: inherit;
 }
 
 
