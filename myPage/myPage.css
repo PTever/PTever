@@ -54,7 +54,7 @@ div.UserInfoNickname {
 div.UserInfoAccount {
   color: rgb(170, 170, 170);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 16px;
   letter-spacing: -0.36px;
 }
@@ -73,7 +73,7 @@ div.UserPropertyTitle {
   position: relative;
   color: rgb(119, 119, 119);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 22px;
   letter-spacing: -0.42px;
 }
@@ -90,6 +90,13 @@ div.UserPropertyValue {
   white-space: nowrap;
 }
 
+#cogwheel {
+  margin: 0 auto;
+  text-align: center;
+  width: 23px;
+  height: 23px;
+}
+
 hr.MyPageHr {
   width: 100%;
   border-top: 1px solid rgb(238, 238, 238);
@@ -101,7 +108,7 @@ div.MyPageDomainWrapper > header {
   padding: 8px 20px;
   font-size: 14px;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: bold;
   letter-spacing: -0.42px;
   color: rgb(204, 204, 204);
 }
@@ -139,6 +146,8 @@ div.TableRowTitle {
   line-height: 24px;
   letter-spacing: -0.03em;
   color: rgb(51, 51, 51);
+  font-family: inherit;
+  font-weight: bold;
 }
 
 hr.MypageBorder {
@@ -208,7 +217,7 @@ div.UserInfoNickname {
 div.UserInfoAccount {
   color: rgb(170, 170, 170);
   font-size: 12px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 16px;
   letter-spacing: -0.36px;
 }
@@ -227,7 +236,7 @@ div.UserPropertyTitle {
   position: relative;
   color: rgb(119, 119, 119);
   font-size: 14px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 22px;
   letter-spacing: -0.42px;
 }
@@ -244,6 +253,14 @@ div.UserPropertyValue {
   white-space: nowrap;
 }
 
+#cogwheel {
+  margin: 0 auto;
+  text-align: center;
+  width: 23px;
+  height: 23px;
+}
+
+
 hr.MyPageHr {
   width: 100%;
   border-top: 1px solid rgb(238, 238, 238);
@@ -255,7 +272,7 @@ div.MyPageDomainWrapper > header {
   padding: 8px 20px;
   font-size: 14px;
   line-height: 22px;
-  font-weight: 500;
+  font-weight: bold;
   letter-spacing: -0.42px;
   color: rgb(204, 204, 204);
 }
