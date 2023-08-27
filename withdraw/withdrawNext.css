@@ -65,6 +65,7 @@ div.QuestionHeader {
 }
 
 div.TitleWrapper {
+  display: flex;
   margin: 0px;
   max-width: 100%;
   width: inherit;
@@ -108,6 +109,11 @@ div.InputWrapper {
   position: relative;
 }
 
+img.PTeverLogo {
+  width: 180px;
+  height: 45px;
+}
+
 input.InputField {
   display: block;
   width: 100%;
@@ -126,7 +132,7 @@ input.InputField {
   background-origin: initial;
   background-clip: initial;
   transform: translateZ(0px);
-  font-size: 30px;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   line-height: unset;
   -webkit-text-fill-color: rgba(122, 41, 250, 0.3);
@@ -174,7 +180,7 @@ button.ButtonWrapper {
   min-height: 40px;
   background-color: rgb(122, 41, 250);
   color: rgb(255, 255, 255);
-  border-radius: 15%;
+  border-radius: 5px;
 }
 
 button.ButtonWrapper:hover {
@@ -194,7 +200,7 @@ button.ButtonWrapper:hover {
   min-height: 40px;
   background-color: rgb(153, 89, 255);  
   color: rgb(255, 255, 255);
-  border-radius: 15%;
+  border-radius: 5px;
 }
 
 span.FlexWrapper {
@@ -213,8 +219,9 @@ span.TextWrapperInButton {
   max-width: 100%;
   width: inherit;
   font-weight: unset;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 28px;
+  letter-spacing: 0.6px;
 }
 
 span.SpacerInButton {
@@ -254,7 +261,7 @@ div.HelperWrapper {
   margin-left: 20px;
   max-width: 100%;
   width: inherit;
-  font-weight: unset;
+  font-weight: bold;
   font-size: 15px;
   line-height: 16px;
   color: rgb(51, 51, 51);
@@ -265,15 +272,29 @@ p.Warning {
   letter-spacing: 0.2px;
 }
 
+label.TitleLabel > span {
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  font-size: 23px;
+}
+
 p.FinalAgreement {
   margin-top: 20px;
   max-width: 100%;
   width: inherit;
-  font-weight: unset;
+  font-weight: bold;
   font-size: 15px;
-  line-height: 16px;
+  line-height: 20px;
   color: rgb(122, 41, 250);
   font-family: inherit;
+  letter-spacing: 0.6px;
+}
+
+p.FinalAgreement > span {
+  font-weight: bold;
+  font-size: 16px;
+  color:salmon;
+  letter-spacing: 0.7px;
 }
 
 
@@ -281,5 +302,30 @@ p.FinalAgreement {
 @media(max-width:768px) {
   .pc {
     display: block !important;
+  }
+
+  label.TitleLabel > span {
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    font-size: 22px;
+    font-weight: bold;
+  } 
+}
+
+@media(max-width:450px) {
+  .pc {
+    display: block !important;
+  }
+
+  label.TitleLabel > span {
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    font-size: 22px;
+    font-weight: bold;
+  } 
+
+  img.PTeverLogo {
+    width: 80px;
+    height: 20px;
   }
 }
