@@ -20,7 +20,7 @@
 <body>
     <!-- DOM TREE를 하나로 구성하기 위해서 전체를 감싸는 div태그입니다. -->
     <div class="root pc">
-        <div class="RootWrapper">
+        <div class="rootWrapper">
             <div class="loginPage-Wrapper">
                 <br>
                 <!-- "로그인" 텍스트 있는 div -->
@@ -42,6 +42,16 @@
                     <a href="" class="find-Password">비밀번호 찾기</a>
                     <!-- iikbgZ -> dDCuWg -->
                     <button type="submit" width="100%" height="56px" font-size="16px" color="#f4f4f4" disabled class="login-Btn">로그인</button>  <!-- 아이디와 비밀번호를 다 친 경우 색이 바뀌면서 disabled가 사라짐-->
+                    <button aria-label="카카오로 인증하기" class="kakao-Btn" type="button">
+                        <span>
+                            <span class="kakao-ImgBox">
+                                <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="kakao-Icon" aria-hidden="true">
+                                    <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z">
+                                    </path>
+                                </svg>카카오로 시작하기
+                            </span>
+                        </span>
+                    </button>
                     <!-- <div class="find-join">
                         <a href="" designelement="text" textindex="19" texttemplatepath="cmVzcG9uc2l2ZV9zcG9ydHNfYWN0aXZpdHlfZ2wvbWVtYmVyL2xvZ2luLmh0bWw=">아이디 찾기</a>
                         &nbsp;|&nbsp;
@@ -50,22 +60,44 @@
                         <a href="" class="join gray-01" designelement="text" textindex="22" texttemplatepath="cmVzcG9uc2l2ZV9zcG9ydHNfYWN0aXZpdHlfZ2wvbWVtYmVyL2xvZ2luLmh0bWw=">회원가입</a>
                     </div> -->
                 </form>
-                <div class="snsLogin-Wrapper">
-                    다른방식으로 로그인
-                    <div class="snsLogin-IconBtn">
-                        <button style="cursor: pointer">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='none' viewBox='0 0 48 48'%3E %3Crect width='48' height='48' fill='%23FBE850' rx='10'/%3E %3Cpath fill='%23000' d='M24 14c-6.628 0-12 4.236-12 9.462 0 3.378 2.246 6.342 5.625 8.016-.184.634-1.181 4.078-1.221 4.349 0 0-.024.203.108.28.131.078.286.018.286.018.378-.053 4.378-2.863 5.07-3.35.692.097 1.405.148 2.132.148 6.628 0 12-4.236 12-9.462C36 18.236 30.628 14 24 14z'/%3E %3C/svg%3E" alt="kakao-login-icon">
-                        </button>
-                        <button style="cursor: pointer">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='none' viewBox='0 0 48 48'%3E %3Crect width='48' height='48' fill='%234273D2' rx='10'/%3E %3Cpath fill='%23fff' d='M22.252 24.42V34h3.888v-9.578h3.244l.485-3.733H26.14v-2.384c0-1.08.303-1.817 1.866-1.817L30 16.487v-3.34c-.345-.045-1.528-.147-2.905-.147-2.876 0-4.843 1.74-4.843 4.935v2.753H19v3.733h3.252z'/%3E %3C/svg%3E" alt="facebook-login-icon">
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+
     <div class="root mobile">
-        
+        <div class="rootWrapper-mobile">
+            <div class="loginPage-Wrapper-mobile">
+                <div class="login-Text-mobile">
+                    <h3>로그인</h3>
+                    <button type="button" class="backBtn-mobile">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32'%3E %3Cpath stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 7l-9 9 9 9'/%3E %3C/svg%3E" alt="left-arrow-icon">
+                    </button>
+                </div>
+                <!-- PTever로고 src -->
+                <img src="main_logo.png" alt="PTever-logo" class="loginPage-Logo">
+                <form class="login-Register">
+                    <div>
+                        <input type="text" name="email" placeholder="아이디 (이메일)" class="inputId-Password">
+                    </div>
+                    <div>
+                        <input type="password" name="password" placeholder="비밀번호" class="inputId-Password">
+                    </div>
+                    <!-- 비밀번호 찾기 경로 -->
+                    <a href="" class="find-Password">비밀번호 찾기</a>
+                    <button type="submit" width="100%" height="56px" font-size="16px" color="#f4f4f4" disabled class="login-Btn">로그인</button>
+                    <button aria-label="카카오로 인증하기" class="kakao-Btn" type="button">
+                        <span>
+                            <span class="kakao-ImgBox">
+                                <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="kakao-Icon" aria-hidden="true">
+                                    <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z">
+                                    </path>
+                                </svg>카카오로 시작하기
+                            </span>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 <script src="login.js"></script>
