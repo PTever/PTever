@@ -20,7 +20,7 @@
 <body>
     <!-- DOM TREE를 하나로 구성하기 위해서 전체를 감싸는 div태그입니다. -->
     <div class="root pc">
-        <div class="RootWrapper">
+        <div class="rootWrapper">
             <div class="loginPage-Wrapper">
                 <br>
                 <!-- "로그인" 텍스트 있는 div -->
@@ -63,8 +63,41 @@
             </div>
         </div>
     </div>
+
     <div class="root mobile">
-        
+        <div class="rootWrapper-mobile">
+            <div class="loginPage-Wrapper-mobile">
+                <div class="login-Text-mobile">
+                    <h3>로그인</h3>
+                    <button type="button" class="backBtn-mobile">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32'%3E %3Cpath stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 7l-9 9 9 9'/%3E %3C/svg%3E" alt="left-arrow-icon">
+                    </button>
+                </div>
+                <!-- PTever로고 src -->
+                <img src="main_logo.png" alt="PTever-logo" class="loginPage-Logo">
+                <form class="login-Register">
+                    <div>
+                        <input type="text" name="email" placeholder="아이디 (이메일)" class="inputId-Password">
+                    </div>
+                    <div>
+                        <input type="password" name="password" placeholder="비밀번호" class="inputId-Password">
+                    </div>
+                    <!-- 비밀번호 찾기 경로 -->
+                    <a href="" class="find-Password">비밀번호 찾기</a>
+                    <button type="submit" width="100%" height="56px" font-size="16px" color="#f4f4f4" disabled class="login-Btn">로그인</button>
+                    <button aria-label="카카오로 인증하기" class="kakao-Btn" type="button">
+                        <span>
+                            <span class="kakao-ImgBox">
+                                <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="kakao-Icon" aria-hidden="true">
+                                    <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z">
+                                    </path>
+                                </svg>카카오로 시작하기
+                            </span>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 <script src="login.js"></script>

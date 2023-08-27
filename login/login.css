@@ -34,7 +34,7 @@ body {
     min-width: 100%;
 }
 
-div.RootWrapper {
+div.rootWrapper {
     position: relative;
     display: flex;
     flex-flow: column;
@@ -443,7 +443,7 @@ button:disabled {
     fill: currentColor;
 }
 
-button, html, [type="submit"] {
+button, html [type="submit"] {
     -webkit-appearance: button;
 } /* 내가 해야되는 건가?? */
 
@@ -463,7 +463,7 @@ button, html, [type="submit"] {
 
 .snsLogin-IconBtn > button {
     margin: 0px 16px;
-    border: none; /*이 줄과 아랫줄을 해야지 프립 로그인 페이지랑 같아짐 어캄? */
+    border: none; 
     background-color: white; 
 }
 button {
@@ -473,4 +473,84 @@ button {
     border-style: none;
     color: inherit;
     font-size: 1em;
+}
+
+/* mobile */
+
+.mobile {
+    background-color: white;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.rootWrapper-mobile {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+.loginPage-Wrapper-mobile {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px;
+    min-height: 653px;
+}
+
+.login-Text-mobile {
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    height: 50px;
+    position: relative;
+}
+
+.login-Text-mobile h3 {
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.54px;
+    color: rgb(51, 51, 51);
+    text-align: center;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.backBtn-mobile {
+    position: absolute;
+    left: 10px;
+    cursor: pointer;
+    padding: 0px;
+}
+
+.loginPage-Logo {
+    margin: 18px auto 0px;
+    width: 90px;
+}
+
+
+
+/* 미디어 쿼리 */
+.pc {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 768px){
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
 }
