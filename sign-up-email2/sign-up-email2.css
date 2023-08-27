@@ -293,12 +293,21 @@ div.MainNavRight-Mypage {
 }
 
 .center-Wrapper h3 {
+<<<<<<< HEAD
     font-size: 18px;
     line-height: 26px;
     letter-spacing: -0.54px;
     color: rgb(51, 51, 51);
     text-align: center;
     font-weight: bold;
+=======
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: -0.54px;
+    line-height: 28px;
+    color: rgb(51, 51, 51);
+    padding: 12px 0px;
+>>>>>>> signUpEmailPage2
     margin: 0px;
 }
 
@@ -377,9 +386,18 @@ button, html [type="button"] {
 }
 
 button {
+<<<<<<< HEAD
     touch-action: manipulation;
     text-transform: none;
     border-style: none;
+=======
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+    font-size: 1em;
+    margin: 0;
+    cursor: pointer;
+>>>>>>> signUpEmailPage2
 }
 
 .input-Certification {
@@ -409,7 +427,11 @@ button {
     margin: 4px 0px 8px;
 }
 
+<<<<<<< HEAD
 .signUp-Btn {
+=======
+/* .signUp-Btn {
+>>>>>>> signUpEmailPage2
     width: 100%;
     height: 56px;
     line-height: 24px;
@@ -420,7 +442,11 @@ button {
     color: rgb(244, 244, 244);
     font-size: 16px;
     margin-top: 44px;
+<<<<<<< HEAD
 }
+=======
+} */
+>>>>>>> signUpEmailPage2
 
 .form_Input {
     width: 100%;
@@ -435,7 +461,108 @@ button {
     margin: 4px 0px 8px;
 }
 
+<<<<<<< HEAD
 
 
 
 
+=======
+/* 이용약관 */
+.sheet-Layout {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px auto;
+    z-index: 3001;
+    width: 100%;
+    max-width: 768px;
+}
+
+.accept-Sheet {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px auto;
+    z-index: 3001;
+    width: 100%;
+    max-width: 768px;
+}
+
+.acaccept-Sheet-Header {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: rgb(51, 51, 51);
+    padding: 12px 0px;
+}
+
+.accept-List-Wrapper {
+    padding: 10px 0px;
+}
+
+.accept-List-Wrapper > * {
+    margin-bottom: 6px;
+}
+
+.accept-Item-Wrapper {
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+p, label {
+    margin: 0px;
+}
+
+.item-CheckArea {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.item-checkBox {
+    margin-right: 12px;
+    pointer-events: none;
+}
+
+[tabindex] {
+    touch-action: manipulation;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+svg {
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+.item-Title {
+    overflow: hidden;
+    color: rgb(119, 119, 119);
+}
+
+.agreement-Btn {
+    width: 100%;
+    height: 56px;
+    line-height: normal;
+    padding: 16px;
+    background-color: rgb(0, 117, 239);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    margin: 15px 0px 30px;
+}
+
+.agreement-Btn:disabled {
+    background-color: rgb(181, 197, 214);
+    color: rgb(244, 244, 244);
+    cursor: not-allowed;
+}
+>>>>>>> signUpEmailPage2
