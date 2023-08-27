@@ -1,44 +1,3 @@
-/* 기본 CSS */
-* {
-  outline: none;
-  background-repeat: no-repeat;
-  font-family: inherit;
-  box-sizing: inherit;
-  font-weight: bold;
-}
-
-html, body {
-  width: 100%;
-  font-size: 14px;
-  color: black;
-  word-break: normal;
-  overflow-wrap: break-word;
-}
-
-html {
-  display: block;
-  box-sizing: border-box;
-  cursor: default;
-  font-family: sans-serif;
-  line-height: 1.5;
-  -webkit-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-::before, ::after {
-  text-decoration: inherit;
-  vertical-align: inherit;
-}
-
-#root {
-  background-color: white;
-  min-height: 100%;
-  min-width: 100%;
-}
-
 div.RootWrapper {
   position: relative;
   display: flex;
@@ -46,245 +5,8 @@ div.RootWrapper {
   min-height: 100vh;
 }
 
-div {
-  display: block;
-}
-
-/* header 및 자식 태그들 css */
-header, section {
-  display: block;
-  font-family: 'SUIT', sans-serif;
-}
-
-header.NavBar-wrapper {
-  width: 100%;
+.pc header.CouponHeader{
   border-bottom: 1px solid rgb(238, 238, 238);
-  z-index: 300;
-}
-
-section.NavBar-TopNavContainer {
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  align-items: center;
-  height: 32px;
-  background-color: rgb(244, 244, 244);
-}
-
-div.NavBar-TopNavMenuWrapper {
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  align-items: center;
-  max-width: 768px;
-  width: 100%;
-  padding: 6px 20px;
-}
-
-div.NavBar-TopNavMenu {
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-}
-
-.NavBar-TopNavMenu a {
-  margin-left: 20px;
-}
-
-.NavBar-TopNavMenu a:first-child {
-  margin-left: 0px;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-  touch-action: manipulation;
-  background-color: transparent;
-  cursor: pointer;
-}
-
-a.TopNavMenu-A, a.MainNavMenu-A {
-  min-height: 1px;
-}
-
-div.TopNavMenu-Text {
-  color: rgb(119, 119, 119);
-  font-size: 10px;
-  line-height: 14px;
-  letter-spacing: -0.3px;
-  font-weight: bold;
-}
-
-section.NavBar-MainNavContainer {
-  display: flex;
-  -webkit-box-pack: center;
-  justify-content: center;
-  background-color: rgb(255, 255, 255);
-}
-
-div.NavBar-MainNavMenuWrapper {
-  position: relative;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  max-width: 768px;
-  width: 100%;
-  padding: 22px 20px 8px;
-}
-
-div.NavBar-MainNavLeft {
-  display: flex;
-  width: 100%;
-}
-
-div.MainNavLeft-Category {
-  width: 48px;
-  height: 51px;
-}
-
-div.IconWrapper {
-  display: flex;
-  align-items: flex-end;
-  -webkit-box-pack: center;
-  justify-content: center;
-  width: 100%;
-  height: 34px;
-}
-
-img {
-  border-style: none;
-  overflow-clip-margin: content-box;
-  overflow: clip;
-  vertical-align: middle;
-}
-
-span.MainNav {
-  display: block;
-  margin-top: 3px;
-  font-size: 10px;
-  line-height: 14px;
-  letter-spacing: -0.3px;
-  text-align: center;
-  color: rgb(170, 170, 170);
-}
-
-span.MainNav-Pipe {
-  width: 1px;
-  height: 38px;
-  background-color: rgb(238, 238, 238);
-  margin-top: 10px;
-  margin-left: 20px;
-  display: inline-block;
-}
-
-img.MainNav-Logo {
-  margin: 17px 0px 17px 20px;
-  width: 68px;
-  height: 24px;
-}
-
-div.MainNav-SearchWrapper {
-  height: 38px;
-  padding: 0px 14px;
-  margin-top: 10px;
-  -webkit-box-flex: 1;
-  flex: 1 1 auto;
-}
-
-div.SearchWrapper {
-  width: 100%;
-}
-
-form {
-  display: block;
-  margin-top: 0em;
-}
-
-form.SearchForm {
-  position: relative;
-  display: flex;
-  -webkit-box-align: center;
-  align-items: center;
-  width: 100%;
-  height: 38px;
-  padding: 0px 12px;
-  border-radius: 19px;
-  background-color: rgb(244, 244, 244);
-  border: none;
-}
-
-img.SearchBar-Icon {
-  margin-right: 5px;
-  user-select: none;
-}
-
-input.SearchInput {
-  width: 100%;
-  color: rgb(51, 51, 51);
-  height: 24px;
-  font-size: 14px;
-  line-height: 22px;
-  font-weight: 700;
-  overflow: visible;
-  background-color: transparent;
-  border-style: none;
-  margin: 0;
-  touch-action: manipulation;
-  text-rendering: auto;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: start;
-  -webkit-rtl-ordering: logical;
-  cursor: text;
-  border-width: 2px;
-  border-color: -internal-light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
-  border-image: initial;
-}
-
-input::placeholder {
-  color:rgb(200, 200, 200);
-}
-
-[type="search"] {
-  -webkit-appearance: textfield;
-  outline-offset: -2px;
-  padding: 1px 2px;
-  writing-mode: horizontal-tb;
-}
-
-div.NavBar-MainNavRight {
-  display: flex;
-  width: 168px;
-}
-
-div.MainNavRight-Community, div.MainNavRight-Wishlist,
-div.MainNavRight-Mypage {
-  width: 48px;
-  height: 51px;
-}
-
-.Pc-Coupon > header{
-  border-bottom: 1px solid rgb(238, 238, 238);
-}
-
-.Mobile-Coupon > header {
-  font-size: 18px;
-  line-height: 26px;
-  letter-spacing: -0.54px;
-  color: rgb(51, 51, 51);
-  font-weight: bold;
-  display: flex;
-  -webkit-box-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  align-items: center;
-  padding: 8px 10px 10px;
 }
 
 div.Content {
@@ -349,7 +71,7 @@ input.Insert-TextField {
   border-radius: 3px;
   padding: 14px 14px 12px;
   background: rgb(250, 250, 250);
-  color: rgb(17, 17, 17);
+  color: rgb(167, 167, 167);
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
@@ -383,19 +105,19 @@ button.InsertButton{
 
 hr.Line {
   height: 1px;
-    background-color: rgb(255, 255, 255);
-    margin: 20px 0px;
-    border-top: 1px solid rgb(238, 238, 238);
-    border-left: none;
-    border-right: none;
-    border-bottom: none;
+  background-color: rgb(255, 255, 255);
+  margin: 20px 0px;
+  border-top: 1px solid rgb(238, 238, 238);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
 }
 
 div.Possession {
   padding: 0px 20px;
 }
 
-lable.CouponListTitle {
+label.CouponListTitle {
   display: block;
   margin-bottom: 20px;
   color: rgb(51, 51, 51);
@@ -413,7 +135,7 @@ div.GroupWrapper {
   flex-wrap: wrap;
 }
 
-div.CouponWrapper {
+.pc div.CouponWrapper {
   position: relative;
   display: flex;
   -webkit-box-pack: center;
@@ -454,7 +176,7 @@ div.ContentWrapper {
   border-right: none;
 }
 
-.Possession div.Description {
+div.Description {
   color: rgb(0, 0, 0);
 }
 
@@ -516,6 +238,10 @@ div.Condition {
   line-height: 13px;
 }
 
+.Condition > div:last-child {
+  margin-top: 6px;
+}
+
 div.CutoutWrapper {
   display: flex;
   -webkit-box-pack: center;
@@ -540,4 +266,349 @@ div.CouponWrapper::after {
   border: 1px solid rgb(221, 221, 221);
   background-color: white;
   transform: rotate(45deg);
+}
+
+
+@media (max-width: 768px) {
+ .mobile header.CouponHeader{
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.54px;
+  color: rgb(51, 51, 51);
+  font-weight: bold;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  align-items: center;
+  padding: 8px 10px 10px;
+}
+
+div.Backward {
+  width: 25%;
+}
+
+img.BackwardImg {
+  width: 32px;
+  height: 32px;
+  transform: rotate(180deg);
+}
+
+div.Wrapper {
+  display: flex;
+  flex-flow: column;
+  align-content: flex-start;
+  margin: 0px auto;
+  max-width: 808px;
+  width: 100%;
+  padding: 0px;
+  min-height: 1px;
+}
+
+form.Register {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 46px 20px 0px;
+}
+
+.Register > div {
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+}
+
+label.RegisterTitle {
+  display: block;
+  margin-bottom: 6px;
+  color: rgb(102, 102, 102);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+div.InsertWrap {
+  position: relative;
+}
+
+input.Insert-TextField {
+  width: 100%;
+  border: 1px solid rgb(238, 238, 238);
+  box-sizing: border-box;
+  border-radius: 3px;
+  padding: 14px 14px 12px;
+  background: rgb(250, 250, 250);
+  color: rgb(167, 167, 167);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -0.03em;
+  text-align: left;
+}
+
+button.InsertButton{
+  align-self: flex-end;
+  height: 100%;
+  margin-left: 8px;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  color: rgb(51, 51, 51);
+  display: inline-flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  text-align: center;
+  white-space: nowrap;
+  width: auto;
+  border-radius: 10px;
+  padding: 13px 18px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+hr.Line {
+  height: 1px;
+  background-color: rgb(255, 255, 255);
+  margin: 20px 0px;
+  border-top: 1px solid rgb(238, 238, 238);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+div.Possession {
+  padding: 0px 20px;
+}
+
+label.CouponListTitle {
+  display: block;
+  margin-bottom: 20px;
+  color: rgb(51, 51, 51);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: -0.42px;
+  text-align: left;
+}
+
+div.GroupWrapper {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.mobile div.CouponWrapper {
+  position: relative;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  overflow: hidden;
+  width: 100%;
+  height: 144px;
+  margin-bottom: 14px;
+  border-radius: 5px;
+}
+
+div.CouponWrapper::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  right: 72px;
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgb(221, 221, 221);
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+div.ContentWrapper {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  width: calc(100% - 82px);
+  height: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  border-top: 1px solid rgb(221, 221, 221);
+  border-bottom: 1px solid rgb(221, 221, 221);
+  border-left: 1px solid rgb(221, 221, 221);
+  border-image: initial;
+  border-right: none;
+}
+
+div.Description {
+  color: rgb(0, 0, 0);
+}
+
+div.PriceWithExpireWrapper {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  height: 22px;
+  font-size: 10px;
+}
+
+div.DiscountPrice {
+  align-self: flex-end;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 24px;
+  color: rgb(122, 41, 250);
+  white-space: nowrap;
+}
+
+div.ExpireDate {
+  color: rgb(119, 119, 119);
+  font-size: 10px;
+  line-height: 13px;
+  word-break: keep-all;
+}
+
+div.CouponNameWrapper {
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  max-width: 206px;
+  height: 32px;
+  margin-top: 6px;
+}
+
+div.CouponName {
+  display: -webkit-box;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: rgb(0, 0, 0);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+div.ConditionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+div.Condition {
+  color: rgb(119, 119, 119);
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.Condition > div:last-child {
+  margin-top: 6px;
+}
+
+div.CutoutWrapper {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 80px;
+  border-width: 1px;
+  border-style: solid solid solid dashed;
+  border-color: rgb(221, 221, 221);
+  border-image: initial;
+  border-radius: 5px;
+}
+
+div.CouponWrapper::after {
+  content: "";
+  position: absolute;
+  bottom: -9px;
+  right: 72px;
+  width: 17px;
+  height: 17px;
+  border: 1px solid rgb(221, 221, 221);
+  background-color: white;
+  transform: rotate(45deg);
+}
+
+footer.PaginationWrapper {
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 0;
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 30px 0px;
+  background-color: white;
+}
+
+button.PrevButton {
+  width: 40px;
+  height: 40px;
+  line-height: normal;
+  padding: 0px;
+  background-color: white;
+  text-align: center;
+  cursor: not-allowed;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  outline: none;
+}
+
+img.PrevButtonImg {
+  transform: rotate(180deg);
+}
+
+button.CurrentPage {
+  width: 40px;
+  height: 40px;
+  line-height: normal;
+  padding: 0px;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  color: rgb(51, 151, 255);
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  outline: none;
+}
+
+div.NextButtonWrapper {
+  display: flex;
+  margin-left: 10px;
+}
+
+button.NextButton {
+  width: 40px;
+  height: 40px;
+  line-height: normal;
+  padding: 0px;
+  background-color: white;
+  text-align: center;
+  cursor: not-allowed;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  outline: none;
+}
+
 }
