@@ -265,7 +265,7 @@ div.MainNavRight-Mypage {
 }
 
 /* =========================================================== */
-.registerPage {
+.page-Wrapper {
     display: flex;
     flex-flow: column;
     align-content: flex-start;
@@ -276,11 +276,12 @@ div.MainNavRight-Mypage {
     min-height: 653px;
 }
 
-.registerPage-Wrapper {
+
+.register-Page-Wrapper {
     margin-top: 20px;
 }
 
-.center-wrapper {
+.center-Wrapper {
     width: 100%;
     display: flex;
     -webkit-box-pack: center;
@@ -291,24 +292,24 @@ div.MainNavRight-Mypage {
     position: relative;
 }
 
-.center-wrapper h3 {
-    font-size: 18px;
-    line-height: 26px;
-    letter-spacing: -0.54px;
-    color: rgb(51, 51, 51);
-    text-align: center;
+.center-Wrapper h3 {
     font-weight: bold;
+    font-size: 20px;
+    letter-spacing: -0.54px;
+    line-height: 28px;
+    color: rgb(51, 51, 51);
+    padding: 12px 0px;
     margin: 0px;
 }
 
-.registerPage-Form {
+.form-RegisterPage {
     width: 100%;
     max-width: 400px;
     margin: 0px auto 60px;
     padding: 24px 20px;
 }
 
-.correct-Input-Form {
+.form-Input {
     width: 100%;
     padding: 14px 14px 12px;
     color: rgb(17, 17, 17);
@@ -323,6 +324,11 @@ div.MainNavRight-Mypage {
 
 input {
     touch-action: manipulation;
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+    font-size: 1em;
+    margin: 0;
 }
 
 input:focus {
@@ -330,49 +336,203 @@ input:focus {
     border: 1px solid rgb(0, 117, 239);
 }
 
+
 button, input {
     overflow: visible;
 }
 
-.correct-Form-Description {
-    margin-bottom: 6px;
-    font-size: 12px;
-    line-height: 16px;
-    letter-spacing: -0.36px;
-    color: rgb(153, 153, 153);
+.certification-Input-PhoneNum-Btn-Wrapper {
+    display: flex;
 }
 
-p {
-    margin: 0px;
-}
-
-button {
-    touch-action: manipulation;
-    text-transform: none;
-    border-style: none;
-    margin: 0;
+.certification-Input-PhoneNum-Btn-Wrapper > div {
+    display: inline-block;
+    width: calc(100% - 126px);
 }
 
 button:disabled {
-    background-color: rgb(181, 197, 214);
     cursor: not-allowed;
 }
 
-.correct-RegisterPage-Submit-Btn {
+.certification-Input-PhoneNum-Btn-Wrapper > button {
+    margin-left: 12px;
+}
+
+button, html [type="button"] {
+    -webkit-appearance: button;
+}
+
+.certification-Btn {
+    width: 136px;
+    height: 50px;
+    line-height: 20px;
+    padding: 0px 13px;
+    background-color: rgb(238, 238, 238);
+    text-align: center;
+    cursor: not-allowed;
+    border-radius: 8px;
+    color: rgb(170, 170, 170);
+    font-size: 14px;
+    margin: 4px 0px 8px;
+}
+
+button {
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+    font-size: 1em;
+    margin: 0;
+    cursor: pointer;
+}
+
+.input-Certification {
+    display: flex;
+}
+
+.input-Certification > div {
+    display: inline-block;
+    width: calc(100% - 100px);
+}
+
+.input-Certification > button {
+    margin-left: 12px;
+}
+
+.certification-Btn2 {
+    width: 106px;
+    height: 50px;
+    line-height: 20px;
+    padding: 0px 13px;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    border: 1px solid rgb(181, 197, 214);
+    border-radius: 8px;
+    color: rgb(181, 197, 214);
+    font-size: 14px;
+    margin: 4px 0px 8px;
+}
+
+/* .signUp-Btn {
     width: 100%;
     height: 56px;
     line-height: 24px;
-    padding: 16px;
-    background-color: rgb(0, 117, 239);
+    padding: 0px 13px;
+    background-color: rgb(181, 197, 214);
     text-align: center;
-    cursor: not-allowed;
     border-radius: 10px;
     color: rgb(244, 244, 244);
     font-size: 16px;
-    margin: 33px 0px 0px;
-    border: none;
+    margin-top: 44px;
+} */
+
+.form_Input {
+    width: 100%;
+    padding: 14px 14px 12px;
+    color: rgb(17, 17, 17);
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.42px;
+    border-radius: 3px;
+    background-color: rgb(250, 250, 250);
+    border: 1px solid rgb(238, 238, 238);
+    margin: 4px 0px 8px;
 }
 
-button, [type="submit"] {
-    -webkit-appearance: button;
+/* 이용약관 */
+.sheet-Layout {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px auto;
+    z-index: 3001;
+    width: 100%;
+    max-width: 768px;
+}
+
+.accept-Sheet {
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0px auto;
+    z-index: 3001;
+    width: 100%;
+    max-width: 768px;
+}
+
+.acaccept-Sheet-Header {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: rgb(51, 51, 51);
+    padding: 12px 0px;
+}
+
+.accept-List-Wrapper {
+    padding: 10px 0px;
+}
+
+.accept-List-Wrapper > * {
+    margin-bottom: 6px;
+}
+
+.accept-Item-Wrapper {
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+
+p, label {
+    margin: 0px;
+}
+
+.item-CheckArea {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+}
+
+.item-checkBox {
+    margin-right: 12px;
+    pointer-events: none;
+}
+
+[tabindex] {
+    touch-action: manipulation;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+svg {
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+.item-Title {
+    overflow: hidden;
+    color: rgb(119, 119, 119);
+}
+
+.agreement-Btn {
+    width: 100%;
+    height: 56px;
+    line-height: normal;
+    padding: 16px;
+    background-color: rgb(0, 117, 239);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    margin: 15px 0px 30px;
+}
+
+.agreement-Btn:disabled {
+    background-color: rgb(181, 197, 214);
+    color: rgb(244, 244, 244);
+    cursor: not-allowed;
 }
