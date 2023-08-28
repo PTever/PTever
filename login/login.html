@@ -19,106 +19,8 @@
 </head>
 <body>
     <!-- DOM TREE를 하나로 구성하기 위해서 전체를 감싸는 div태그입니다. -->
-    <div id="root">
-        <div class="RootWrapper">
-            <!-- header태그로 감싼 후 section 태그 2개가 각각 위아래를 담당합니다. -->
-            <!-- 클래스명은 원래 프립을 참고하여 최대한 직관적으로 정했습니다. -->
-            <!-- 그리고 혹시나 다른 태그들 css 주시다가 겹치지 않도록 했습니다. -->
-            <!-- 피드백 환영입니다...! -->
-            <header class="NavBar-wrapper">
-                <section class="NavBar-TopNavContainer">
-                    <div class="NavBar-TopNavMenuWrapper">
-                        <div class="NavBar-TopNavMenu">
-                            <!-- 아래 a 태그는 "트레이너 회원 지원" 연결 링크입니다. -->
-                            <a href="" class="HostSupport TopNavMenu-A">
-                                <div class="TopNavMenu-Text">트레이너 회원 지원</div>
-                            </a>
-                        </div>
-                        <div class="NavBar-TopNavMenu">
-                            <!-- 회원가입 -->
-                            <!-- 로그인 시 a태그의 class명으로 접근하여 a태그의 href와 
-                                자식 div의 innerText를 유저이름 관련으로 바꿔주면 될 듯 합니다. -->
-                            <a href="" class="Join-OR-UserName TopNavMenu-A">
-                                <div class="TopNavMenu-Text">회원가입</div>
-                            </a>
-                            <!-- 로그인 -->
-                            <!-- 로그인 시 회원가입과 마찬가지로 로그아웃으로 바꿔주면 됩니다. -->
-                            <a href="" class="Login-OR-Logout TopNavMenu-A">
-                                <div class="TopNavMenu-Text">로그인</div>
-                            </a>
-                            <!-- 고객센터 -->
-                            <a href="" class="Help TopNavMenu-A">
-                                <div class="TopNavMenu-Text">고객센터</div>
-                            </a>
-                        </div>
-                    </div>
-                </section>
-                <!-- 그 아래 메인 섹션입니다. -->
-                <section class="NavBar-MainNavContainer">
-                    <div class="NavBar-MainNavMenuWrapper">
-                        <!-- 카테고리, 메인로고, 검색을 Left 섹션으로 둡니다. -->
-                        <div class="NavBar-MainNavLeft">
-                            <!-- 카테고리입니다. -->
-                            <a href="" class="MainNavMenu-A MainNav-Category">
-                                <div class="MainNavLeft-Category">
-                                    <div class="IconWrapper">
-                                        <img src="data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Crect x='11.5' y='10.5' width='7' height='7' fill='%23CCCCCC'/%3E %3Crect x='1.5' y='10.5' width='7' height='7' fill='%23CCCCCC'/%3E %3Crect x='1.5' y='0.5' width='7' height='7' fill='%23CCCCCC'/%3E %3Crect x='11.5' y='0.5' width='7' height='7' fill='%23CCCCCC'/%3E %3C/svg%3E" alt="카테고리-icon">
-                                    </div>
-                                    <span class="MainNav">카테고리</span>
-                                </div>
-                            </a>
-                            <!-- 로고와의 구분선 span 태그입니다. -->
-                            <span class="MainNav-Pipe"></span>
-                            <!-- 로고입니다. -->
-                            <a href="" class="MainNavMenu-A MainNav-Logo">
-                                <img src="./main_logo.png" class="MainNav-Logo">
-                            </a>
-                            <!-- 검색창입니다. -->
-                            <div class="MainNav-SearchWrapper">
-                                <div class="SearchWrapper">
-                                    <div>
-                                        <form class="SearchForm">
-                                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' viewBox='0 0 24 24'%3E %3Cpath stroke='%23AAA' stroke-width='2' d='M11 17c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM15 15l4.95 4.95'/%3E %3C/svg%3E" alt class="SearchBar-Icon">
-                                            <input type="search" placeholder="지금 생각나는 운동을 검색하세요." class="SearchInput" value>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        <!-- 커뮤니티, 찜, 마이가 들어갈 Right 섹션입니다. -->
-                        <div class="NavBar-MainNavRight">
-                            <!-- 커뮤니티입니다. -->
-                            <a href="" class="MainNavMenu-A MainNav-Community">
-                                <div class="MainNavRight-Community">
-                                    <div class="IconWrapper">
-                                        <img src="data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Crect x='1' y='0.5' width='18' height='17' fill='%23AAAAAA'/%3E %3Crect x='4.375' y='13.375' width='11.25' height='0.75' stroke='white' stroke-width='0.75'/%3E %3Crect x='4.375' y='10.375' width='7.25' height='0.75' stroke='white' stroke-width='0.75'/%3E %3Cpath d='M8.87786 3.85311C8.63758 3.62543 8.31786 3.5 7.97789 3.5C7.63792 3.5 7.31829 3.62534 7.07783 3.85311L6.75005 4.16359L6.42227 3.85302C6.18189 3.62534 5.86218 3.5 5.5222 3.5C5.18223 3.5 4.86261 3.62534 4.62224 3.85311C4.12592 4.32322 4.12592 5.08808 4.62224 5.55819L6.61734 7.44794C6.65251 7.48126 6.70025 7.5 6.74995 7.5C6.79966 7.5 6.8474 7.48126 6.88257 7.44794L8.87767 5.55819C9.37408 5.08799 9.37408 4.32313 8.87786 3.85311Z' fill='white'/%3E %3C/svg%3E" alt="커뮤니티-icon">
-                                    </div>
-                                    <span class="MainNav">커뮤니티</span>
-                                </div>
-                            </a>
-                            <!-- 찜 입니다. -->
-                            <a href="" class="MainNavMenu-A MainNav-Wishlist">
-                                <div class="MainNavRight-Wishlist">
-                                    <div class="IconWrapper">
-                                        <img src="data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cg clip-path='url(%23clip0_2730_481)'%3E %3Cpath d='M11.5835 20.2971L11.5775 20.2935L11.5547 20.2815C11.0812 20.0239 10.6161 19.7509 10.1603 19.4631C9.07354 18.7793 8.038 18.0173 7.0619 17.1831C4.8539 15.2787 2.3999 12.4215 2.3999 8.9991C2.40001 7.88245 2.74628 6.7933 3.39104 5.8816C4.0358 4.96991 4.94734 4.28052 6.00014 3.90836C7.05295 3.53619 8.19523 3.49955 9.26972 3.80349C10.3442 4.10743 11.298 4.73699 11.9999 5.6055C12.7018 4.73699 13.6556 4.10743 14.7301 3.80349C15.8046 3.49955 16.9469 3.53619 17.9997 3.90836C19.0525 4.28052 19.964 4.96991 20.6088 5.8816C21.2535 6.7933 21.5998 7.88245 21.5999 8.9991C21.5999 12.4215 19.1471 15.2787 16.9379 17.1831C15.5511 18.368 14.0455 19.4063 12.4451 20.2815L12.4223 20.2935L12.4163 20.2971H12.4139C12.2864 20.3646 12.1443 20.4001 12.0001 20.4003C11.8558 20.4005 11.7136 20.3655 11.5859 20.2983L11.5835 20.2971Z' fill='%23AAAAAA'/%3E %3C/g%3E %3Cdefs%3E %3CclipPath id='clip0_2730_481'%3E %3Crect width='24' height='24' fill='white'/%3E %3C/clipPath%3E %3C/defs%3E %3C/svg%3E" alt="찜-icon">
-                                    </div>
-                                    <span class="MainNav">찜</span>
-                                </div>
-                            </a>
-                            <!-- 마이 입니다. -->
-                            <a href="" class="MainNavMenu-A MainNav-Mypage">
-                                <div class="MainNavRight-Mypage">
-                                    <div class="IconWrapper">
-                                        <img src="data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M17 11H3L1 17.4H19L17 11Z' fill='%23AAAAAA'/%3E %3Ccircle cx='10' cy='5' r='4.5' fill='%23AAAAAA'/%3E %3C/svg%3E" alt="마이-icon">
-                                    </div>
-                                    <span class="MainNav">마이</span>
-                                </div>
-                            </a>
-                        </div>
-                        </div>
-                    </div>
-                </section>
-            </header>         
-            <!--================================================================================-->
+    <div class="root pc">
+        <div class="rootWrapper">
             <div class="loginPage-Wrapper">
                 <br>
                 <!-- "로그인" 텍스트 있는 div -->
@@ -140,6 +42,16 @@
                     <a href="" class="find-Password">비밀번호 찾기</a>
                     <!-- iikbgZ -> dDCuWg -->
                     <button type="submit" width="100%" height="56px" font-size="16px" color="#f4f4f4" disabled class="login-Btn">로그인</button>  <!-- 아이디와 비밀번호를 다 친 경우 색이 바뀌면서 disabled가 사라짐-->
+                    <button aria-label="카카오로 인증하기" class="kakao-Btn" type="button">
+                        <span>
+                            <span class="kakao-ImgBox">
+                                <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="kakao-Icon" aria-hidden="true">
+                                    <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z">
+                                    </path>
+                                </svg>카카오로 시작하기
+                            </span>
+                        </span>
+                    </button>
                     <!-- <div class="find-join">
                         <a href="" designelement="text" textindex="19" texttemplatepath="cmVzcG9uc2l2ZV9zcG9ydHNfYWN0aXZpdHlfZ2wvbWVtYmVyL2xvZ2luLmh0bWw=">아이디 찾기</a>
                         &nbsp;|&nbsp;
@@ -148,21 +60,45 @@
                         <a href="" class="join gray-01" designelement="text" textindex="22" texttemplatepath="cmVzcG9uc2l2ZV9zcG9ydHNfYWN0aXZpdHlfZ2wvbWVtYmVyL2xvZ2luLmh0bWw=">회원가입</a>
                     </div> -->
                 </form>
-                <div class="snsLogin-Wrapper">
-                    다른방식으로 로그인
-                    <div class="snsLogin-IconBtn">
-                        <button style="cursor: pointer">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='none' viewBox='0 0 48 48'%3E %3Crect width='48' height='48' fill='%23FBE850' rx='10'/%3E %3Cpath fill='%23000' d='M24 14c-6.628 0-12 4.236-12 9.462 0 3.378 2.246 6.342 5.625 8.016-.184.634-1.181 4.078-1.221 4.349 0 0-.024.203.108.28.131.078.286.018.286.018.378-.053 4.378-2.863 5.07-3.35.692.097 1.405.148 2.132.148 6.628 0 12-4.236 12-9.462C36 18.236 30.628 14 24 14z'/%3E %3C/svg%3E" alt="kakao-login-icon">
-                        </button>
-                        <button style="cursor: pointer">
-                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='none' viewBox='0 0 48 48'%3E %3Crect width='48' height='48' fill='%234273D2' rx='10'/%3E %3Cpath fill='%23fff' d='M22.252 24.42V34h3.888v-9.578h3.244l.485-3.733H26.14v-2.384c0-1.08.303-1.817 1.866-1.817L30 16.487v-3.34c-.345-.045-1.528-.147-2.905-.147-2.876 0-4.843 1.74-4.843 4.935v2.753H19v3.733h3.252z'/%3E %3C/svg%3E" alt="facebook-login-icon">
-                        </button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 
+    <div class="root mobile">
+        <div class="rootWrapper-mobile">
+            <div class="loginPage-Wrapper-mobile">
+                <div class="login-Text-mobile">
+                    <h3>로그인</h3>
+                    <button type="button" class="backBtn-mobile">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32'%3E %3Cpath stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 7l-9 9 9 9'/%3E %3C/svg%3E" alt="left-arrow-icon">
+                    </button>
+                </div>
+                <!-- PTever로고 src -->
+                <img src="main_logo.png" alt="PTever-logo" class="loginPage-Logo">
+                <form class="login-Register">
+                    <div>
+                        <input type="text" name="email" placeholder="아이디 (이메일)" class="inputId-Password">
+                    </div>
+                    <div>
+                        <input type="password" name="password" placeholder="비밀번호" class="inputId-Password">
+                    </div>
+                    <!-- 비밀번호 찾기 경로 -->
+                    <a href="" class="find-Password">비밀번호 찾기</a>
+                    <button type="submit" width="100%" height="56px" font-size="16px" color="#f4f4f4" disabled class="login-Btn">로그인</button>
+                    <button aria-label="카카오로 인증하기" class="kakao-Btn" type="button">
+                        <span>
+                            <span class="kakao-ImgBox">
+                                <svg viewBox="0 0 32 32" focusable="false" role="presentation" class="kakao-Icon" aria-hidden="true">
+                                    <path d="M16 4.64c-6.96 0-12.64 4.48-12.64 10.08 0 3.52 2.32 6.64 5.76 8.48l-.96 4.96 5.44-3.6 2.4.16c6.96 0 12.64-4.48 12.64-10.08S22.96 4.56 16 4.64z">
+                                    </path>
+                                </svg>카카오로 시작하기
+                            </span>
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="login.js"></script>
 </html>
