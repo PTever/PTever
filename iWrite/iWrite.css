@@ -420,7 +420,7 @@ div.PaginationButtonGroup_PrevButtonWrapper{
     margin-right: 10px;
 }
 
-button.ButtonPage_OnStyledButton{
+button.ButtonPage_StyledButtonOn{
   width: 40px;
   height: 40px;
   line-height: normal;
@@ -470,7 +470,7 @@ div.PaginationButtonGroup_NextButtonWrapper{
   margin-left: 10px;
 }
 
-button.ButtonPage_PrevStyledButton{
+button.ButtonPage_StyledOff{
   width: 40px;
     height: 40px;
     line-height: normal;
@@ -491,7 +491,24 @@ button.ButtonPage_PrevStyledButton{
   transform: rotate(180deg);
 }
 
-button.ButtonPage_NextStyledButton{
+button.ButtonPage_StyledButton{
+  width: 40px;
+  height: 40px;
+  line-height: normal;
+  padding: 0px;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 18px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  outline: none;
+}
+button.ButtonPage_Styled{
   width: 40px;
   height: 40px;
   line-height: normal;

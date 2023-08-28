@@ -356,7 +356,7 @@ div.Fade_Wrapper{
     min-height: 1px;
 }
 
-ul.Transaction_Wrapper{
+ul.FullPage_Wrapper{
   margin: 0px;
   padding: 0px;
   list-style: none;
@@ -372,7 +372,8 @@ footer.Footer_Wrapper{
     background-color: white;
 }
 
-div.Transaction_TitleWrapper{
+
+div.NoticeEntity_TitleWrapper{
   display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
@@ -382,6 +383,37 @@ div.Transaction_TitleWrapper{
     font-size: 14px;
     cursor: pointer;
     border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+div.FreePost_Badge{
+  margin-left: 0px;
+    margin-right: 21px;
+    width: 90px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 0px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgb(51, 151, 255);
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+
+div.FreePost_Title{
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+}
+
+div.FreePost_Date{
+  -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    margin-left: 10px;
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+    font-weight: normal;
 }
 
 div.Transaction_Bage{
@@ -407,6 +439,37 @@ div.Transaction_Title{
 }
 
 div.Transaction_Date{
+  -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    margin-left: 10px;
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+    font-weight: normal;
+}
+
+div.iWrite_Bage{
+  margin-left: 0px;
+    margin-right: 21px;
+    width: 90px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 0px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: #E014B4;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+
+div.iWrite_Title{
+  -webkit-box-flex: 1;
+  flex: 1 1 auto;
+}
+
+div.iWrite_Date{
   -webkit-box-flex: 0;
     flex: 0 0 auto;
     margin-left: 10px;
