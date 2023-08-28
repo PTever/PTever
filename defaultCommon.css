@@ -554,6 +554,13 @@
    clip: auto;
  }
 
+ button:disabled {
+  border: none;
+  background-color: rgb(238, 238, 238);
+  color: rgb(170, 170, 170);
+  cursor: not-allowed;
+}
+
  div.root {
   background-color: white;
   min-height: 100%;

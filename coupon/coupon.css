@@ -268,8 +268,31 @@ div.CouponWrapper::after {
   transform: rotate(45deg);
 }
 
+/* 쿠폰 없을 때 */
+div.EmptyCouponWrapper {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+div.EmptyCouponText {
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+  color: rgb(155, 155, 155);
+  margin-top: 10px;
+}
+
 
 @media (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+
  .mobile header.CouponHeader{
   font-size: 18px;
   line-height: 26px;
@@ -332,7 +355,7 @@ div.InsertWrap {
   position: relative;
 }
 
-input.Insert-TextField {
+input.Insert-TextFieldMobile {
   width: 100%;
   border: 1px solid rgb(238, 238, 238);
   box-sizing: border-box;
@@ -347,7 +370,8 @@ input.Insert-TextField {
   text-align: left;
 }
 
-button.InsertButton{
+
+button.InsertButtonMobile{
   align-self: flex-end;
   height: 100%;
   margin-left: 8px;
@@ -609,6 +633,25 @@ button.NextButton {
   -webkit-box-align: center;
   align-items: center;
   outline: none;
+}
+
+/* 쿠폰 없을 때 */
+div.EmptyCouponWrapper {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+
+div.EmptyCouponText {
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 18px;
+  text-align: center;
+  color: rgb(155, 155, 155);
+  margin-top: 10px;
 }
 
 }
