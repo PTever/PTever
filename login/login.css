@@ -391,7 +391,7 @@ button:disabled {
     color: rgb(244, 244, 244);
     font-size: 16px;
     margin: 33px 0px 0px;
-    border: none; /*얘도 아래와 마찬가지로 none해줘야 될 것 같기도 */
+    border: none; 
 }
 
 .kakao-Btn {
@@ -445,7 +445,7 @@ button:disabled {
 
 button, html [type="submit"] {
     -webkit-appearance: button;
-} /* 내가 해야되는 건가?? */
+} 
 
 .snsLogin-Wrapper {
     padding-bottom: 60px;
