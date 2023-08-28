@@ -341,3 +341,61 @@ arrowsEx.forEach((arrow) => {
 //////////////////////////////////////////////////
 
 // 메인페이지 앱 메인 슬라이드배너 js입니다.
+
+const mainBannerMobile = document.querySelector(".SlickTrack-Mobile");
+const currentCountMobile = document.querySelector(".MainBanner-CurrentCount-Mobile");
+let countMobile = 0;
+let firstDivMobile = document.createElement("div");
+let lastDivMobile = document.createElement("div");
+
+// 첫 화면에서는 첫 번째 배너가 보이지만,
+// 이 함수가 실행되는 순간 두 번째 배너로 넘어간다.
+function autoSlideMobile() {
+    // 이동시간 0.5초
+    mainBannerMobile.style.transition = "transform 0.5s";
+    // 마지막 슬라이드일 때
+    // 8번 뒤에 1번을 배치시킨다.
+    // 8번에서 1번으로 슬라이드 진행
+    // 0s를 줘서 원래 1번 위치로 이동(슬라이드 효과는 안 보임)
+    countMobile++;
+    if (countMobile == 8) {
+        mainBannerMobile.style.transform = "translate(-" + 100 * (countMobile + 1) + "vw)";
+        setTimeout(function () {
+            mainBannerMobile.style.transition = "transform 0s";
+            mainBannerMobile.style.transform = "translate(-100vw)";
+        }, 500);
+        countMobile = 0;
+    } else {
+        mainBannerMobile.style.transform = "translate(-" + 100 * (countMobile + 1) + "vw)";
+    }
+    // 더보기 버튼의 숫자를 업데이트해준다.
+    currentCountMobile.innerText = countMobile + 1;
+}
+
+// 가장 마지막에 첫 번째 배너를 이어 붙인다.
+firstDivMobile.innerHTML = `<img src="./bannerImages/mainbanner_top1.png">`;
+mainBannerMobile.appendChild(firstDivMobile);
+
+// 가장 첫 번째에 마지막 배너를 이어 붙인다.
+lastDivMobile.innerHTML = `<img src="./bannerImages/mainbanner_top10.png">`;
+mainBannerMobile.insertBefore(lastDivMobile, document.querySelector(".SlickTrack-Mobile div"));
+
+// 첫 번째 배너는 8번이니까 왼쪽으로 한 번 밀어서 1번이 보이게 한다.
+mainBannerMobile.style.transform = "translate(-100vw)";
+
+// 4초마다 슬라이드 이동
+let interMobile = setInterval(autoSlideMobile, 4000);
+
+/////////////////////////////////////////////////////////////////////////
+// (앱) 슬라이드 배너의 더보기 버튼 클릭 시 배너 상세 팝업 js
+const detailBannerButtonMobile = document.querySelector(".MainBanner-InfoButton-Mobile");
+const detailBannerInfoMobile = document.querySelector(".FullScreenWrapper-Mobile");
+const detailExitButtonMobile = document.querySelector(".MainBannerViewer-Exit-Mobile");
+
+detailBannerButtonMobile.addEventListener("click", () => {
+    detailBannerInfoMobile.style.display = "block";
+});
+
+detailExitButtonMobile.addEventListener("click", () => {
+    detailBannerInfoMobile.style.display = "none";
+});

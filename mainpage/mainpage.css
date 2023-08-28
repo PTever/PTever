@@ -1067,3 +1067,207 @@ strong {
 .TrainerBannerImg {
     width: 100%;
 }
+
+/* 메인페이지 반응형(앱) css입니다. */
+.MainBannerWrapper-Mobile {
+    width: 100vw;
+    margin-left: -20px;
+}
+
+.MainBanner-FadeWrapper-Mobile {
+    opacity: 1;
+    display: block;
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out 0s;
+    min-width: 0px;
+    min-height: 1px;
+}
+
+.MainBanner-BannerWrapperMobile {
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.MainBanner-ImgSliderWrapper-Mobile {
+    position: relative;
+    overflow: hidden;
+}
+
+.ImageSlider-Mobile {
+    visibility: visible;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.SlickList-Mobile {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.SlickTrack-Mobile {
+    width: 1000vw;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.SlickTrack-Mobile div {
+    width: 100vw;
+    float: left;
+}
+
+.SlickTrack-Mobile img {
+    width: 100%;
+}
+
+.MainBanner-InfoButton-Mobile {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    position: absolute;
+    right: 12px;
+    height: 28px;
+    padding: 6px 10px;
+    color: rgb(204, 204, 204);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: -0.36px;
+    font-weight: bold;
+    border-radius: 16px;
+    background-color: rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    bottom: 12px;
+}
+
+.MainBanner-CurrentCount-Mobile {
+    color: rgb(255, 255, 255);
+    margin-right: 2px;
+}
+
+.MainBanner-InfoButtonImg-Mobile {
+    margin-left: 4px;
+}
+
+.FullScreenWrapper-Mobile {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 800;
+}
+
+.MainBannerViewer-Mobile {
+    max-width: 768px;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    height: 100%;
+    margin: 0px auto;
+}
+
+.MainBannerViewer-HeaderMobile {
+    position: relative;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+    min-height: 32px;
+    margin-top: 20px;
+    margin-bottom: 4px;
+}
+
+.MainBannerViewer-HeaderTitleMobile {
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    line-height: 24px;
+    letter-spacing: -0.48px;
+    font-weight: 500;
+}
+
+.MainBannerViewer-Exit-Mobile {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    padding: 0px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.MainBannerViewer-Exit-Mobile img {
+    width: 100%;
+}
+
+h2 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.MainBannerViewer-ContainerWrapperMobile {
+    width: 100%;
+    padding: 0px;
+    overflow: auto;
+}
+
+.MainBannerViewer-ContainerMobile {
+    margin-bottom: 56px;
+}
+
+.MainBannerViewer-ContainerA {
+    min-height: 1px;
+}
+
+.MainBannerViewer-ImageWrapperMobile {
+    margin-bottom: 4px;
+    min-height: 1px;
+}
+
+.MainBannerViewer-ImageWrapperMobile img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* 미디어 쿼리 */
+.pc {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+
+    .mobile {
+        display: block;
+    }
+}
