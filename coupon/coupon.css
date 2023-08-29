@@ -101,6 +101,7 @@ button.InsertButton{
   padding: 13px 18px;
   font-size: 14px;
   line-height: 22px;
+  cursor: pointer;
 }
 
 hr.Line {
@@ -393,6 +394,7 @@ button.InsertButtonMobile{
   padding: 13px 18px;
   font-size: 14px;
   line-height: 22px;
+  cursor: pointer;
 }
 
 hr.Line {
