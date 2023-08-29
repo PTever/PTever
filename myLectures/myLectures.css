@@ -1,3 +1,8 @@
+.myLectures {
+  font-family: inherit;
+  font-weight: bold;
+}
+
 div.RootWrapper {
   position: relative;
   display: flex;
