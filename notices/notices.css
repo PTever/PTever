@@ -248,6 +248,13 @@ strong {
     overflow: auto;
 }
 
+.TabLabelsWrapper-Mobile {
+    border-bottom: 1px solid rgb(238, 238, 238);
+    padding: 20px 0px;
+    white-space: nowrap;
+    overflow: auto;
+}
+
 .TabLabel-Selected > a, .TabLabel-Unselected > a {
     margin-right: 20px;
 }
@@ -258,8 +265,14 @@ strong {
     color: black;
 }
 
+.TabLabelsWrapper-Mobile a {
+    outline: none;
+    text-decoration: none;
+    color: black;
+}
+
 .TabLabel-Selected, .TabLabel-Selected a {
-    color: rgb(51, 151, 255);
+    color: rgb(51, 151, 255) !important;
     cursor: pointer;
 }
 
@@ -268,9 +281,29 @@ strong {
     cursor: pointer;
 }
 
-.FadeWrapper {
+.FadeWrapper1, .FadeWrapper1-Mobile {
     opacity: 1;
     display: block;
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out 0s;
+    min-width: 0px;
+    min-height: 1px;
+}
+
+.FadeWrapper2, .FadeWrapper2-Mobile {
+    opacity: 1;
+    display: none;
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out 0s;
+    min-width: 0px;
+    min-height: 1px;
+}
+
+.FadeWrapper3, .FadeWrapper3-Mobile {
+    opacity: 1;
+    display: none;
     width: auto;
     height: auto;
     transition: opacity 200ms ease-in-out 0s;

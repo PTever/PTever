@@ -450,7 +450,7 @@ strong {
 
 /* shortcut 리스트 css */
 .ShortcutListWrapper {
-    margin-bottom: 12px;
+    margin-bottom: 40px;
 }
 
 .Shortcut-FadeWrapper {
@@ -464,24 +464,90 @@ strong {
 }
 
 .Shortcut-NodelistWrapper {
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    justify-items: center;
+}
+
+.Shortcut-NodelistWrapper > * {
+    display: table;
+}
+
+.Shortcut-NodelistWrapper a {
+    width: 100%;
 }
 
 .Shortcut-ItemWrapper {
     display: flex;
-    flex-direction: column;
+    align-items: flex-end;
+    height: 92px;
+    border-radius: 5px;
+    padding: 6px 10px;
+    background-color: rgb(244, 244, 244);
+    background-size: cover;
+    color: white;
     font-weight: 500;
-    text-align: center;
-    cursor: pointer;
-    width: 60px;
-    height: 83px;
-    font-size: 12px;
-    line-height: 16px;
-    color: rgb(170, 170, 170);
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.48px;
+    position: relative;
 }
+
+.Shortcut-BackgroundDeemed {
+    opacity: 0.2;
+    background-color: rgb(17, 17, 17);
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.Shortcut-TextDeemed {
+    opacity: 0.2;
+    background-image: linear-gradient(to right, rgb(3, 0, 0), rgba(2, 0, 0, 0.52), rgba(0, 0, 0, 0));
+    width: 94px;
+    height: 100%;
+    left: 0px;
+    bottom: 0px;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.Shortcut1 {
+    background-image: url(./shortcutIcons/shortcut_lectureImage.jpg);
+}
+
+.Shortcut2 {
+    background-image: url(./shortcutIcons/shortcut_shoppingmallImage.jpg);
+}
+
+.Shortcut3 {
+    background-image: url(./shortcutIcons/shortcut_communityImage.jpg);
+}
+
+.Shortcut4 {
+    background-image: url(./shortcutIcons/shortcut_myLectureImage.jpg);
+}
+
+/* .Shortcut5 {
+    background-image: url(./shortcutIcons/shortcut_mypageImage.jpg);
+} */
+
+.Shortcut6 {
+    background-image: url(./shortcutIcons/shortcut_purchaseListImage.jpg);
+}
+
+.Shortcut7 {
+    background-image: url(./shortcutIcons/shortcut_eventImage.jpg);
+}
+
+.Shortcut-ItemWrapper span {
+    z-index: 1;
+}
+
 
 .Shortcut-ImageWrapper {
     min-height: 1px;
