@@ -23,7 +23,7 @@
                     <div class="center-Wrapper">
                         <h3>회원가입</h3>
                     </div>
-                    <form action="" class="form-RegisterPage">
+                    <form autocomplete="false" class="form-RegisterPage">
                         <div>
                             <input type="text" name="nickname" placeholder="닉네임" class="form-Input">
                         </div>
@@ -39,7 +39,7 @@
                                     <input type="number" name="verificationCode" placeholder="인증번호" pattern="[0-9]*" class="form_Input">
                                 </div>
                             </div>
-                            <button class="certification-Btn2">인증하기</button>
+                            <button type="button" width="106px" height="50px" color="#b5c5d6" font-size="14px" disabled class="certification-Btn2">인증하기</button>
                         </div>
                         <br>
                         <div class="sheet-Layout">
@@ -216,7 +216,205 @@
     </div>
 
     <div class="root mobile">
-        
+        <div class="RootWrapper">
+            <div class="page-Wrapper">
+                <div class="register-Page-Wrapper">
+                    <div class="center-Wrapper">
+                        <h3>회원가입</h3>
+                        <button type="button" class="backBtn-mobile">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' fill='none' viewBox='0 0 32 32'%3E %3Cpath stroke='%23333' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 7l-9 9 9 9'/%3E %3C/svg%3E" alt="left-arrow-icon">
+                        </button>
+                    </div>
+                    <form autocomplete="false" class="registerPage-Form-mobile">
+                        <div>
+                            <input type="text" name="nickname" placeholder="닉네임" class="form-InputNickName-mobile">
+                        </div>
+                        <div class="certification-Input-PhoneNum-Btn-Wrapper">
+                            <div>
+                                <input type="tel" name="mobileNumber" placeholder="휴대폰 번호 ( - 없이 입력)" class="form_InputPhoneNum-mobile">
+                            </div>
+                            <button type="button" width="136px" height="50px" color="#aaa" font-size="14px" disabled class="certification-Btn-mobile">인증번호 전송</button>
+                        </div>
+                        <div class="input-Certification">
+                            <div>
+                                <div>
+                                    <input type="number" name="verificationCode" placeholder="인증번호" pattern="[0-9]*" class="form_InputCheckNum-mobile">
+                                </div>
+                            </div>
+                            <button type="button" width="106px" height="50px" color="#b5c5d6" font-size="14px" disabled class="certification-Btn2-mobile">인증하기</button>
+                        </div>
+                        <br>
+                        <div class="sheet-Layout">
+                            <div class="accept-Sheet">
+                                <header class="acaccept-Sheet-Header">
+                                    본인확인 약관
+                                </header>
+                                <div class="accept-List-Wrapper">
+                                    <label class="accept-Item-Wrapper">
+                                        <button class="item-CheckArea">
+                                            <div class="item-checkBox">
+                                                <div title role="checkbox" aria-label="animation" tabindex="0" style="width: 24px' height: 24px; overflow: hidden; margin: 0px auto; outline: none;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+                                                        <defs>
+                                                            <clipPath id="__lottie_element_122">
+                                                                <rect width="24" height="24" x="0" y="0"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                        <g clip-path="url(#__lottie_element_122)">
+                                                            <g transform="matrix(1,0,0,1,3.5,6)" opacity="1" style="display: block;">
+                                                                <g opacity="1" transform="matrix(1,0,0,1,8.5,4.468999862670898)"></g>
+                                                                <g opacity="1" transform="matrix(1,0,0,1,8.5,5.681000232696533)">
+                                                                    <path fill="rgb(221,221,221)" fill-opacity="1" d=" M-2.25,5.681000232696533 C-2.25,5.681000232696533 -8.178000450134277,0.20800000429153442 -8.178000450134277,0.20800000429153442 C-8.583999633789062,-0.16599999368190765 -8.609000205993652,-0.7990000247955322 -8.234999656677246,-1.2050000429153442 C-7.860000133514404,-1.6089999675750732 -7.228000164031982,-1.6349999904632568 -6.822000026702881,-1.2610000371932983 C-6.822000026702881,-1.2610000371932983 -2.25,2.9579999446868896 -2.25,2.9579999446868896 C-2.25,2.9579999446868896 6.821000099182129,-5.414999961853027 6.821000099182129,-5.414999961853027 C7.2270002365112305,-5.789000034332275 7.861000061035156,-5.763999938964844 8.234000205993652,-5.359000205993652 C8.609000205993652,-4.953000068664551 8.583999633789062,-4.320000171661377 8.178999900817871,-3.944999933242798 C8.178999900817871,-3.944999933242798 -2.25,5.681000232696533 -2.25,5.681000232696533z"></path>
+                                                                </g>
+                                                            </g>
+                                                            <g transform="matrix(1,0,0,1,12,12)" opacity="1" style="display: none;">
+                                                                <g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(0,117,239)" stroke-opacity="1" stroke-width="2.7" d=" M-7.875,-1.5006723403930664 C-7.875,-1.5006723403930664 -7.644298553466797,-1.2352641820907593 -7.644298553466797,-1.2352641820907593 C-7.644298553466797,-1.2352641820907593 -7.503884792327881,-1.0332123041152954 -7.503884792327881,-1.0332123041152954"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                </div>
+                                            </div>
+                                            <span class="item-Title">모두 동의</span>
+                                        </button>
+                                    </label>
+                                    <label class="accept-Item-Wrapper">
+                                        <button class="item-CheckArea">
+                                            <div class="item-checkBox">
+                                                <div title role="checkbox" aria-label="animation" tabindex="0" style="width: 24px' height: 24px; overflow: hidden; margin: 0px auto; outline: none;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+                                                        <defs>
+                                                            <clipPath id="__lottie_element_122">
+                                                                <!-- <clipPath id="__lottie_element_242"> 체크 후-->
+                                                                <rect width="24" height="24" x="0" y="0"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                        <g clip-path="url(#__lottie_element_122)">
+                                                            <g transform="matrix(1,0,0,1,3.5,6)" opacity="1" style="display: block;">
+                                                                <g opacity="1" transform="matrix(1,0,0,1,8.5,4.468999862670898)"></g>
+                                                                <g opacity="1" transform="matrix(1,0,0,1,8.5,5.681000232696533)">
+                                                                    <path fill="rgb(221,221,221)" fill-opacity="1" d=" M-2.25,5.681000232696533 C-2.25,5.681000232696533 -8.178000450134277,0.20800000429153442 -8.178000450134277,0.20800000429153442 C-8.583999633789062,-0.16599999368190765 -8.609000205993652,-0.7990000247955322 -8.234999656677246,-1.2050000429153442 C-7.860000133514404,-1.6089999675750732 -7.228000164031982,-1.6349999904632568 -6.822000026702881,-1.2610000371932983 C-6.822000026702881,-1.2610000371932983 -2.25,2.9579999446868896 -2.25,2.9579999446868896 C-2.25,2.9579999446868896 6.821000099182129,-5.414999961853027 6.821000099182129,-5.414999961853027 C7.2270002365112305,-5.789000034332275 7.861000061035156,-5.763999938964844 8.234000205993652,-5.359000205993652 C8.609000205993652,-4.953000068664551 8.583999633789062,-4.320000171661377 8.178999900817871,-3.944999933242798 C8.178999900817871,-3.944999933242798 -2.25,5.681000232696533 -2.25,5.681000232696533z"></path>
+                                                                </g>
+                                                            </g>
+                                                            <g transform="matrix(1,0,0,1,12,12)" opacity="1" style="display: none;">
+                                                                <g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(0,117,239)" stroke-opacity="1" stroke-width="2.7" d=" M-7.875,-1.5006723403930664 C-7.875,-1.5006723403930664 -7.644298553466797,-1.2352641820907593 -7.644298553466797,-1.2352641820907593 C-7.644298553466797,-1.2352641820907593 -7.503884792327881,-1.0332123041152954 -7.503884792327881,-1.0332123041152954"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                </div>
+                                            </div>
+                                            <span class="item-Title">이용약관 필수 동의</span>
+                                        </button>
+                                        <!-- 이용역관 페이지 이동 경로 -->
+                                        <a href="" target="_blank">
+                                            <img src="data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M1 11L6 6L1 1' stroke='%23CCCCCC' stroke-linecap='round' stroke-linejoin='round'/%3E %3C/svg%3E" alt="/static-info/agreement">
+                                        </a>
+                                    </label>
+                                    <label class="accept-Item-Wrapper">
+                                        <button class="item-CheckArea">
+                                            <div class="item-checkBox">
+                                                <div title role="checkbox" aria-label="animation" tabindex="0" style="width: 24px' height: 24px; overflow: hidden; margin: 0px auto; outline: none;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+                                                        <defs>
+                                                            <clipPath id="__lottie_element_122">
+                                                                <!-- <clipPath id="__lottie_element_242"> 체크 후-->
+                                                                <rect width="24" height="24" x="0" y="0"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                        <g clip-path="url(#__lottie_element_122)">
+                                                            <g transform="matrix(1,0,0,1,3.5,6)" opacity="1" style="display: block;">
+                                                                <g opacity="1" transform="matrix(1,0,0,1,8.5,4.468999862670898)"></g>
+                                                                <g opacity="1" transform="matrix(1,0,0,1,8.5,5.681000232696533)">
+                                                                    <path fill="rgb(221,221,221)" fill-opacity="1" d=" M-2.25,5.681000232696533 C-2.25,5.681000232696533 -8.178000450134277,0.20800000429153442 -8.178000450134277,0.20800000429153442 C-8.583999633789062,-0.16599999368190765 -8.609000205993652,-0.7990000247955322 -8.234999656677246,-1.2050000429153442 C-7.860000133514404,-1.6089999675750732 -7.228000164031982,-1.6349999904632568 -6.822000026702881,-1.2610000371932983 C-6.822000026702881,-1.2610000371932983 -2.25,2.9579999446868896 -2.25,2.9579999446868896 C-2.25,2.9579999446868896 6.821000099182129,-5.414999961853027 6.821000099182129,-5.414999961853027 C7.2270002365112305,-5.789000034332275 7.861000061035156,-5.763999938964844 8.234000205993652,-5.359000205993652 C8.609000205993652,-4.953000068664551 8.583999633789062,-4.320000171661377 8.178999900817871,-3.944999933242798 C8.178999900817871,-3.944999933242798 -2.25,5.681000232696533 -2.25,5.681000232696533z"></path>
+                                                                </g>
+                                                            </g>
+                                                            <g transform="matrix(1,0,0,1,12,12)" opacity="1" style="display: none;">
+                                                                <g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(0,117,239)" stroke-opacity="1" stroke-width="2.7" d=" M-7.875,-1.5006723403930664 C-7.875,-1.5006723403930664 -7.644298553466797,-1.2352641820907593 -7.644298553466797,-1.2352641820907593 C-7.644298553466797,-1.2352641820907593 -7.503884792327881,-1.0332123041152954 -7.503884792327881,-1.0332123041152954"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                </div>
+                                            </div>
+                                            <span class="item-Title">개인정보 처리방침 필수 동의</span>
+                                        </button>
+                                        <!-- 개인정보 처리방침 필수 동의 경로 -->
+                                        <a href="" target="_blank">
+                                            <img src="data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M1 11L6 6L1 1' stroke='%23CCCCCC' stroke-linecap='round' stroke-linejoin='round'/%3E %3C/svg%3E" alt="/static-info/privacy">
+                                        </a>
+                                    </label>
+                                    <label class="accept-Item-Wrapper">
+                                        <button class="item-CheckArea">
+                                            <div class="item-checkBox">
+                                                <div title role="checkbox" aria-label="animation" tabindex="0" style="width: 24px' height: 24px; overflow: hidden; margin: 0px auto; outline: none;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+                                                        <defs>
+                                                            <clipPath id="__lottie_element_122">
+                                                                <rect width="24" height="24" x="0" y="0"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                        <g clip-path="url(#__lottie_element_122)">
+                                                            <g transform="matrix(1,0,0,1,3.5,6)" opacity="1" style="display: block;">
+                                                                <g opacity="1" transform="matrix(1,0,0,1,8.5,4.468999862670898)"></g>
+                                                                <g opacity="1" transform="matrix(1,0,0,1,8.5,5.681000232696533)">
+                                                                    <path fill="rgb(221,221,221)" fill-opacity="1" d=" M-2.25,5.681000232696533 C-2.25,5.681000232696533 -8.178000450134277,0.20800000429153442 -8.178000450134277,0.20800000429153442 C-8.583999633789062,-0.16599999368190765 -8.609000205993652,-0.7990000247955322 -8.234999656677246,-1.2050000429153442 C-7.860000133514404,-1.6089999675750732 -7.228000164031982,-1.6349999904632568 -6.822000026702881,-1.2610000371932983 C-6.822000026702881,-1.2610000371932983 -2.25,2.9579999446868896 -2.25,2.9579999446868896 C-2.25,2.9579999446868896 6.821000099182129,-5.414999961853027 6.821000099182129,-5.414999961853027 C7.2270002365112305,-5.789000034332275 7.861000061035156,-5.763999938964844 8.234000205993652,-5.359000205993652 C8.609000205993652,-4.953000068664551 8.583999633789062,-4.320000171661377 8.178999900817871,-3.944999933242798 C8.178999900817871,-3.944999933242798 -2.25,5.681000232696533 -2.25,5.681000232696533z"></path>
+                                                                </g>
+                                                            </g>
+                                                            <g transform="matrix(1,0,0,1,12,12)" opacity="1" style="display: none;">
+                                                                <g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(0,117,239)" stroke-opacity="1" stroke-width="2.7" d=" M-7.875,-1.5006723403930664 C-7.875,-1.5006723403930664 -7.644298553466797,-1.2352641820907593 -7.644298553466797,-1.2352641820907593 C-7.644298553466797,-1.2352641820907593 -7.503884792327881,-1.0332123041152954 -7.503884792327881,-1.0332123041152954"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                </div>
+                                            </div>
+                                            <span class="item-Title">위치기반 서비스 이용약관 필수 동의</span>
+                                        </button>
+                                        <!-- 위치기반 서비스 이용약관 필수 동의 경로 -->
+                                        <a href="" target="_blank">
+                                            <img src="data:image/svg+xml,%3Csvg width='7' height='12' viewBox='0 0 7 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M1 11L6 6L1 1' stroke='%23CCCCCC' stroke-linecap='round' stroke-linejoin='round'/%3E %3C/svg%3E" alt="/static-info/geoLocationAgreement">
+                                        </a>
+                                    </label>
+                                    <label class="accept-Item-Wrapper">
+                                        <button class="item-CheckArea">
+                                            <div class="item-checkBox">
+                                                <div title role="checkbox" aria-label="animation" tabindex="0" style="width: 24px' height: 24px; overflow: hidden; margin: 0px auto; outline: none;">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+                                                        <defs>
+                                                            <clipPath id="__lottie_element_122">
+                                                                <rect width="24" height="24" x="0" y="0"></rect>
+                                                            </clipPath>
+                                                        </defs>
+                                                        <g clip-path="url(#__lottie_element_122)">
+                                                            <g transform="matrix(1,0,0,1,3.5,6)" opacity="1" style="display: block;">
+                                                                <g opacity="1" transform="matrix(1,0,0,1,8.5,4.468999862670898)"></g>
+                                                                <g opacity="1" transform="matrix(1,0,0,1,8.5,5.681000232696533)">
+                                                                    <path fill="rgb(221,221,221)" fill-opacity="1" d=" M-2.25,5.681000232696533 C-2.25,5.681000232696533 -8.178000450134277,0.20800000429153442 -8.178000450134277,0.20800000429153442 C-8.583999633789062,-0.16599999368190765 -8.609000205993652,-0.7990000247955322 -8.234999656677246,-1.2050000429153442 C-7.860000133514404,-1.6089999675750732 -7.228000164031982,-1.6349999904632568 -6.822000026702881,-1.2610000371932983 C-6.822000026702881,-1.2610000371932983 -2.25,2.9579999446868896 -2.25,2.9579999446868896 C-2.25,2.9579999446868896 6.821000099182129,-5.414999961853027 6.821000099182129,-5.414999961853027 C7.2270002365112305,-5.789000034332275 7.861000061035156,-5.763999938964844 8.234000205993652,-5.359000205993652 C8.609000205993652,-4.953000068664551 8.583999633789062,-4.320000171661377 8.178999900817871,-3.944999933242798 C8.178999900817871,-3.944999933242798 -2.25,5.681000232696533 -2.25,5.681000232696533z"></path>
+                                                                </g>
+                                                            </g>
+                                                            <g transform="matrix(1,0,0,1,12,12)" opacity="1" style="display: none;">
+                                                                <g opacity="1" transform="matrix(1,0,0,1,0,0)"><path stroke-linecap="round" stroke-linejoin="round" fill-opacity="0" stroke="rgb(0,117,239)" stroke-opacity="1" stroke-width="2.7" d=" M-7.875,-1.5006723403930664 C-7.875,-1.5006723403930664 -7.644298553466797,-1.2352641820907593 -7.644298553466797,-1.2352641820907593 C-7.644298553466797,-1.2352641820907593 -7.503884792327881,-1.0332123041152954 -7.503884792327881,-1.0332123041152954"></path>
+                                                            </g>
+                                                        </g>
+                                                    </g>
+                                                </svg>
+                                                </div>
+                                            </div>
+                                            <span class="item-Title">마케팅 수신 선택 동의</span>
+                                        </button>
+                                    </label>
+                                    <button width="100%" color="white" font-size="16px" height="56px" disabled class="agreement-Btn-mobile">
+                                        모두 동의하고 가입하기
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>    
+            </div>
+        </div>
     </div>
 </body>
+<script src="sign-up-email2.js"></script>
 </html>
