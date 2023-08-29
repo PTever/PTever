@@ -470,11 +470,18 @@ strong {
     justify-items: center;
 }
 
-.Shortcut-NodelistWrapper > * {
+.Shortcut-NodelistWrapper-Mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    justify-items: center;
+}
+
+.Shortcut-NodelistWrapper > *, .Shortcut-NodelistWrapper-Mobile > * {
     display: table;
 }
 
-.Shortcut-NodelistWrapper a {
+.Shortcut-NodelistWrapper a, .Shortcut-NodelistWrapper-Mobile a {
     width: 100%;
 }
 
@@ -643,16 +650,26 @@ strong {
     color: black;
 }
 
-.CardGroup-ProductContent {
+.CardGroup-ProductContent, .CardGroup-ProductContent-Mobile {
     display: flex;
     flex-flow: wrap;
     min-height: 1px;
+}
+
+.CardGroup-ProductContent-Mobile > :nth-child(2n) {
+    margin-right: 0px;
 }
 
 .CardGroup-ProductContent > * {
     margin-right: 15px;
     margin-bottom: 30px;
     width: calc(25% - 11.25px) !important;
+}
+
+.CardGroup-ProductContent-Mobile > * {
+    margin-right: 15px;
+    margin-bottom: 30px;
+    width: calc(50% - 7.5px) !important;
 }
 
 .CardGroup-ProductContent > :last-child {
@@ -815,11 +832,11 @@ strong {
 
 /* 광고 배너 css */
 
-.Main-Banner-Wrapper-Ad {
+.Main-Banner-Wrapper-Ad, .Main-Banner-Wrapper-Ad-Mobile {
     width: 100%;
 }
 
-.Main-Banner-FadeWrapper-Ad {
+.Main-Banner-FadeWrapper-Ad, .Main-Banner-FadeWrapper-Ad-Mobile {
     display: block;
     opacity: 1;
     width: auto;
@@ -829,7 +846,7 @@ strong {
     min-height: 1px;
 }
 
-.Main-SlideBannerWrapper-Ad {
+.Main-SlideBannerWrapper-Ad, .Main-SlideBannerWrapper-Ad-Mobile {
     margin-bottom: 24px;
     width: 100%;
 }
@@ -849,6 +866,23 @@ strong {
     touch-action: pan-y;
     -webkit-tap-highlight-color: transparent;
     width: 768px;
+}
+
+.ImageSlider-Ad-Mobile {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+    width: 90vw;
 }
 
 .ImageSlider-PrevArrow-Ad {
@@ -920,12 +954,28 @@ strong {
     cursor: pointer;
 }
 
+.ImageSlider-ImageTrack-Ad-Mobile {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 360vw;
+    cursor: pointer;
+}
+
 .ImageSlider-ImageTrack-Ad div {
     width: 768px;
     float: left;
 }
 
-.ImageSlider-ImageTrack-Ad img {
+.ImageSlider-ImageTrack-Ad-Mobile div {
+    width: 90vw;
+    float: left;
+}
+
+.ImageSlider-ImageTrack-Ad img, .ImageSlider-ImageTrack-Ad-Mobile img {
     width: 100%;
 }
 
@@ -1311,10 +1361,162 @@ h2 {
     width: 100%;
 }
 
+/* 기획전 슬라이드배너 (앱) css입니다. */
+.ExBannerListWrapper-Mobile {
+    position: relative;
+    width: 100%;
+}
 
+.ExBanner-FadeWrapper {
+    width: auto;
+    height: auto;
+    transition: opacity 200ms ease-in-out 0s;
+    display: block;
+    opacity: 1;
+    min-width: 0px;
+    min-height: 1px;
+}
 
+.ExBannerWrapper-Mobile {
+    margin-bottom: 15px;
+    width: 100%;
+}
 
+.ExBanner-ImgSliderWrapper {
+    overflow: hidden;
+    margin-left: -10px;
+    width: 95vw;
+}
 
+.ExImgSliderWrapper-SliderWrapper {
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.ExImgSlider {
+    visibility: visible;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ExSlick-List {
+    padding: 0;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    margin: 0;
+}
+
+.ExSlick-Track {
+    width: 665vw;
+    opacity: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ExSlick-Track div {
+    width: 95vw;
+    float: left;
+}
+
+.ExSlick-Track img {
+    width: 100%;
+}
+
+.ImageSlider-DotButtons-Mobile {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+}
+
+.ImageSlider-DotButtons-Mobile li {
+    width: 13px;
+    height: 13px;
+    margin: 0px;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    cursor: pointer;
+}
+
+.ImageSlider-DotButtons-Mobile li button {
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    content: "";
+    padding: 5px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.Dotbutton-Mobile::before {
+    opacity: 1;
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    background-color: rgb(51, 151, 255);
+}
+
+.ImageSlider-DotButtons-Mobile li .ButtonUnselected-Mobile::before {
+    opacity: 1;
+    background-color: rgb(238, 238, 238);
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 2.5px;
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+}
+
+.TrainerBannerWrapper-Mobile {
+    overflow: hidden;
+    margin-bottom: 20px;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+}
+
+.TrainerBannerImg {
+    width: 100%;
+}
 
 
 

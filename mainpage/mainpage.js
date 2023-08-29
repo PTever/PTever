@@ -399,3 +399,132 @@ detailBannerButtonMobile.addEventListener("click", () => {
 detailExitButtonMobile.addEventListener("click", () => {
     detailBannerInfoMobile.style.display = "none";
 });
+
+
+////////////////////////////////////////////////////////////
+// (앱) 광고 슬라이드배너입니다.
+// 광고 배너 js입니다.
+const adBannerM = document.querySelector(".ImageSlider-ImageTrack-Ad-Mobile");
+
+let countAdM = 0;
+let firstDivAdM = document.createElement("div");
+let lastDivAdM = document.createElement("div");
+
+// 첫 화면에서는 첫 번째 배너가 보이지만,
+// 이 함수가 실행되는 순간 두 번째 배너로 넘어간다.
+function autoSlideAdM() {
+    // 이동시간 0.5초
+    adBannerM.style.transition = "transform 0.5s";
+    // 마지막 슬라이드일 때
+    // 2번 뒤에 1번을 배치시킨다.
+    // 2번에서 1번으로 슬라이드 진행
+    // 0s를 줘서 원래 1번 위치로 이동(슬라이드 효과는 안 보임)
+    countAdM++;
+    if (countAdM == 2) {
+        adBannerM.style.transform = "translate(-" + 90 * (countAdM + 1) + "vw)";
+        setTimeout(function () {
+            adBannerM.style.transition = "transform 0s";
+            adBannerM.style.transform = "translate(-90vw)";
+        }, 500);
+        countAdM = 0;
+    } else {
+        adBannerM.style.transform = "translate(-" + 90 * (countAdM + 1) + "vw)";
+    }
+}
+
+// 가장 마지막에 첫 번째 배너를 이어 붙인다.
+firstDivAdM.innerHTML = `<img src="./bannerImages/adBanner_1.png">`;
+adBannerM.appendChild(firstDivAdM);
+
+// 가장 첫 번째에 마지막 배너를 이어 붙인다.
+lastDivAdM.innerHTML = `<img src="./bannerImages/adBanner_2.png">`;
+adBannerM.insertBefore(lastDivAdM, document.querySelector(".ImageSlider-ImageTrack-Ad-Mobile div"));
+
+// 첫 번째 배너는 2번이니까 왼쪽으로 한 번 밀어서 1번이 보이게 한다.
+adBannerM.style.transform = "translate(-90vw)";
+
+// 4초마다 슬라이드 이동
+let interAdM = setInterval(autoSlideAdM, 4000);
+
+
+////////////////////////////////////////////////////////////
+// (앱) 기획전 슬라이드배너입니다.
+
+const exBannerM = document.querySelector(".ExSlick-Track");
+const exButtonsM = document.querySelectorAll(".ImageSlider-DotButtons-Mobile button");
+
+let countExM = 0,
+    tempM = exButtonsM[countExM];
+let firstDivExM = document.createElement("div");
+let lastDivExM = document.createElement("div");
+
+// 첫 화면에서는 첫 번째 배너가 보이지만,
+// 이 함수가 실행되는 순간 두 번째 배너로 넘어간다.
+function autoSlideExM() {
+    // 이동시간 0.5초
+    exBannerM.style.transition = "transform 0.5s";
+    // 마지막 슬라이드일 때
+    // 5번 뒤에 1번을 배치시킨다.
+    // 5번에서 1번으로 슬라이드 진행
+    // 0s를 줘서 원래 1번 위치로 이동(슬라이드 효과는 안 보임)
+    countExM++;
+    if (countExM == 5) {
+        exButtonsM[countExM - 1].classList.toggle("ButtonUnselected-Mobile")
+        exBannerM.style.transform = "translate(-" + 95 * (countExM + 1) + "vw)";
+        setTimeout(function () {
+            exBannerM.style.transition = "transform 0s";
+            exBannerM.style.transform = "translate(-95vw)";
+        }, 500);
+        countExM = 0;
+        exButtonsM[countExM].classList.toggle("ButtonUnselected-Mobile")
+    } else {
+        exButtonsM[countExM - 1].classList.toggle("ButtonUnselected-Mobile")
+        exButtonsM[countExM].classList.toggle("ButtonUnselected-Mobile")
+        exBannerM.style.transform = "translate(-" + 95 * (countExM + 1) + "vw)";
+    }
+    tempM = exButtonsM[countExM];
+}
+
+// 가장 마지막에 첫 번째 배너를 이어 붙인다.
+firstDivExM.innerHTML = `<img src="./bannerImages/exbanner_mobile_1.png">`;
+exBannerM.appendChild(firstDivExM);
+
+// 가장 첫 번째에 마지막 배너를 이어 붙인다.
+lastDivExM.innerHTML = `<img src="./bannerImages/exbanner_mobile_5.png">`;
+exBannerM.insertBefore(lastDivExM, document.querySelector(".ExSlick-Track div"));
+
+// 첫 번째 버튼이 무조건 첫 번째 배너니까 색 변경하고 시작
+exButtonsM[countExM].classList.toggle("ButtonUnselected-Mobile");
+
+// 첫 번째 배너는 5번이니까 왼쪽으로 한 번 밀어서 1번이 보이게 한다.
+exBannerM.style.transform = "translate(-95vw)";
+
+// 4초마다 슬라이드 이동
+let interExM = setInterval(autoSlideExM, 4000);
+
+// 원하는 번호의 배너 보기
+// 각 버튼마다 클릭 이벤트 적용
+// 버튼을 광클하지 못하게 막아주는 flag
+let numberButtonCheckM = true;
+
+exButtonsM.forEach((v, i, btns) => {
+    // 각 버튼에 클릭 이벤트를 걸어줌.
+    btns[i].addEventListener("click", function () {
+        // 아래의 얍삽한 방법으로 인해 0s로 변할 수 있기 때문에 무조건 0.5s로 설정하고 시작
+        exBannerM.style.transition = "transform 0.5s";
+        if (numberButtonCheckM) {
+            // 0.5초가 지나고 나서 클릭했거나 처음 클릭하거나
+            numberButtonCheckM = false; // 누르자마자 바로 false
+            clearInterval(interExM); // autoSlide 타이머 제거, 동시에 돌아가면 안됨.
+            countExM = i; // 클릭한 버튼의 인덱스를 배너의 번호로 설정
+            tempM.classList.toggle("ButtonUnselected-Mobile");
+            exButtonsM[countExM].classList.toggle("ButtonUnselected-Mobile");
+            exBannerM.style.transform = "translate(-" + 95 * (countExM + 1) + "vw)";
+            tempM = exButtonsM[countExM];
+            interExM = setInterval(autoSlideExM, 4000);
+            setTimeout(function () {
+                numberButtonCheckM = true;
+            }, 500);
+        }
+    });
+});
