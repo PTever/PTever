@@ -1,6 +1,5 @@
-.myLectures {
+.noReviews {
   font-family: inherit;
-  font-weight: bold;
 }
 
 div.RootWrapper {
@@ -21,7 +20,7 @@ div.PageWrapper {
   min-height: 1px;
 }
 
-.pc header.myLecturesHeader{
+.pc header.myReviewsHeader{
   border-bottom: 1px solid rgb(238, 238, 238);
 }
 
@@ -41,6 +40,7 @@ div.Title {
   letter-spacing: -0.72px;
   color: rgb(51, 51, 51);
 }
+
 
 
 a.SubmitWrapper {
@@ -108,8 +108,8 @@ span.TextContinue {
   max-width: 100%;
   width: inherit;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: 17px;
+  line-height: 20px;
   line-height: 1;
   font-family: inherit;
 }
@@ -121,14 +121,14 @@ span.TextContinue {
   transition: all 0.1s ease-out 0s;
 }
 
-/* 결제한 강의가 없을 때 나오는 섹션의 css */
+/* 결제한 후기가 없을 때 나오는 섹션의 css */
 
 div.ContentWrapper {
   padding: 0px 20px;
   position: relative;
 }
 
-div.noLectureContentWrapper {
+div.noReviewContentWrapper {
   width: auto;
   height: auto;
   transition: opacity 200ms ease-in-out 0s;
@@ -138,7 +138,7 @@ div.noLectureContentWrapper {
   min-height: 1px;
 }
 
-div.noLectureBaseWrapper {
+div.noReviewBaseWrapper {
   display: flex;
   flex-direction: column;
   -webkit-box-align: center;
@@ -147,14 +147,14 @@ div.noLectureBaseWrapper {
   padding: 100px 0px;
 }
 
-img.noPTEVER {
-  width: 100px;
+img.noReview {
+  width: 80px;
 }
 
 strong.BaseHeader {
-  font-size: 18px;
+  font-size: 13px;
   line-height: 26px;
-  margin-top: 24px;
+  margin-top: 18px;
 }
 
 div.BaseDescription {
