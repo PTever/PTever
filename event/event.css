@@ -328,12 +328,26 @@ div.MainNavRight-Mypage {
     flex: 0 0 auto;
 }
 
+.event-Title {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+}
+
 .noticeEntity-Title {
     -webkit-box-flex: 1;
     flex: 1 1 auto;
 }
 
 .noticeEntity-Date {
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    margin-left: 10px;
+    color: rgb(155, 155, 155);
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.event-Entity-Date {
     -webkit-box-flex: 0;
     flex: 0 0 auto;
     margin-left: 10px;
@@ -368,7 +382,8 @@ p {
 }
 
 /* paging */
-/* .pagination-Wrapper {
+
+.pagination-Wrapper {
     display: flex;
     -webkit-box-pack: center;
     justify-content: center;
@@ -376,35 +391,22 @@ p {
     flex: 0 0 auto;
     width: 100%;
     padding: 30px 0px;
-    background-color: white;
+    background-color: white;    
 }
 
-.pagination-Btn-Group {
+.prev-Btn {
     display: flex;
     margin-right: 10px;
 }
 
-button {
-    cursor: not-allowed;
-    touch-action: manipulation;
-    -webkit-appearance: button;
-    text-transform: none;
-    border-style: none;
-    color: inherit;
-    margin: 0;
-}
-
-
-button, input {
-    overflow: visible;
-}
-.page-Btn {
+.left-Btn {
     width: 40px;
     height: 40px;
     line-height: normal;
     padding: 0px;
     background-color: white;
     text-align: center;
+    cursor: not-allowed;
     border-radius: 50%;
     font-size: 18px;
     display: flex;
@@ -415,11 +417,11 @@ button, input {
     outline: none;
 }
 
-.pagination-Btn-Group-Icon {
+.paginationBtn-Group-Icon {
     transform: rotate(180deg);
 }
 
-.page-Btn_Number {
+.page-Btn {
     width: 40px;
     height: 40px;
     line-height: normal;
@@ -436,19 +438,15 @@ button, input {
     justify-content: center;
     -webkit-box-align: center;
     align-items: center;
+    outline: none;
 }
 
-.pagination-Next-Btn {
+.next-Btn {
     display: flex;
     margin-left: 10px;
 }
 
-.pagination-Next-Btn {
-    display: flex;
-    margin-left: 10px;
-}
-
-.change-Page-Btn {
+.right-Btn {
     width: 40px;
     height: 40px;
     line-height: normal;
@@ -466,7 +464,166 @@ button, input {
     outline: none;
 }
 
-.Next-Pagination-Btn-Group-Icon  {
+
+
+
+button {
+    cursor: pointer;
+    touch-action: manipulation;
+    -webkit-appearance: button;
+    text-transform: none;
+    border-style: none;
+    color: inherit;
+    margin: 0;
+}
+
+
+button, input {
+    overflow: visible;
+}
+
+/* mobile */
+
+.mobile {
+    background-color: white;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+.RootWrappe-mobile {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
+
+.page-Wrapper-mobile {
+    display: flex;
+    flex-flow: column;
+    align-content: flex-start;
+    margin: 0px auto;
+    max-width: 808px;
+    width: 100%;
+    padding: 0px 20px;
+    min-height: 1px;
+}
+
+.event-Page-Title-mobile {
+    margin: 30px 0px 20px;
+    line-height: 24px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.eventList-Page-Wrapper-mobile {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.event-Title-mobile {
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+}
+
+
+.event-Entity-Wrapper-mobile {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    min-height: 60px;
+    line-height: 18px;
+    padding: 20px 0px;
+    font-size: 11.8px;
+    cursor: pointer;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.event-Badge-mobile {
+    margin-left: 0px;
+    margin-right: 10px;
+    width: 48px;
+    height: 20px;
+    line-height: 20px;
+    border-radius: 5px;
+    padding: 0px 6px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    background-color: rgb(160, 130, 250);
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+}
+
+/* page Btn */
+.pagination-Wrapper-mobile {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-flex: 0;
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 30px 0px;
+    background-color: white;
+}
+
+.prev-Btn-mobile {
+    display: flex;
+    margin-right: 10px;
+}
+
+.left-Btn-mobile {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 18px;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+.paginationBtn-Group-Icon-mobile {
+    transform: rotate(180deg);
+}
+
+.page-Btn-mobile {
+    width: 40px;
+    height: 40px;
+    line-height: normal;
+    padding: 0px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    color: rgb(51, 151, 255);
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    outline: none;
+}
+
+.next-Btn-mobile {
+    display: flex;
+    margin-left: 10px;
+}
+
+.right-Btn-mobile {
     width: 40px;
     height: 40px;
     line-height: normal;
@@ -482,8 +639,28 @@ button, input {
     -webkit-box-align: center;
     align-items: center;
     outline: none;
-} */
+}
 
+.event-Entity-Content-mobile {
+    width: 100%;
+    min-height: 84px;
+    padding: 20px;
+    background-color: rgb(239, 247, 255);
+    color: rgb(74, 74, 74);
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.event-Entity-Content-mobile * {
+    width: 100%;
+    font-family: inherit;
+}
+
+.event-Entity-Content-mobile img {
+    max-width: 600px;
+}
+
+/* 미디어 쿼리 */
 .pc {
     display: block;
 }

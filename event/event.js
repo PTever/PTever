@@ -18,6 +18,23 @@ eventTitle[0].addEventListener("click", () => {
     }
 });
 
+// 앱 {
+const eventTitleMobile = document.querySelectorAll(".event-Entity-Wrapper-mobile");
+const eventContentMobile = document.querySelectorAll(".event-Entity-Content-mobile");
+const eventTitleTitleMobile = document.querySelectorAll(".event-Title-mobile");
+
+eventTitleMobile[0].addEventListener("click", () => {
+    if(eventTitleMobile[0].style.borderBottom != "none"){
+        eventTitleMobile[0].style.borderBottom = "none";
+        eventTitleTitleMobile[0].style.fontWeight = "bolder";
+        eventContentMobile[0].style.display = "block";
+    } else{
+        eventTitleMobile[0].style.borderBottom = "1px solid rgb(230, 230, 230)";
+        eventTitleTitleMobile[0].style.fontWeight = "bold";
+        eventContentMobile[0].style.display = "none";
+    }
+});
+
 // globalThis = 0;
 
 // eventTitles.forEach((eventTitle) => {
