@@ -20,10 +20,6 @@
     <!-- DOM TREE를 하나로 구성하기 위해서 전체를 감싸는 div태그입니다. -->
     <div class="root pc">
         <div class="RootWrapper">
-            <!-- header태그로 감싼 후 section 태그 2개가 각각 위아래를 담당합니다. -->
-            <!-- 클래스명은 원래 프립을 참고하여 최대한 직관적으로 정했습니다. -->
-            <!-- 그리고 혹시나 다른 태그들 css 주시다가 겹치지 않도록 했습니다. -->
-            <!-- 피드백 환영입니다...! -->
 
             <!-- 쿠폰 페이지 -->
             <!-- 전체 div -->
@@ -45,7 +41,7 @@
                       <input placeholder="쿠폰 코드를 입력하세요." class="Insert-TextField" value>
                     </div>
                   </div>
-                  <button type="submit" class="InsertButton">확인</button>
+                  <button type="submit" class="InsertButton" disabled>확인</button>
                 </form>
                 <!-- 쿠폰 등록 div와 보유한 쿠폰 div의 구분선 -->
                 <hr size="40" type="Line" class="Line">
@@ -172,7 +168,7 @@
                       <input placeholder="쿠폰 코드를 입력하세요." class="Insert-TextField" value>
                     </div>
                   </div>
-                  <button type="submit" class="InsertButton">확인</button>
+                  <button type="submit" class="InsertButton" disabled>확인</button>
                 </form>
                 <!-- 쿠폰 등록 div와 보유한 쿠폰 div의 구분선 -->
                 <hr size="40" type="Line" class="Line">
@@ -264,4 +260,5 @@
         </div>
     </div>
 </body>
+<script src="./coupon.js"></script>
 </html>
