@@ -275,7 +275,7 @@ div.FrequentPageWrapper {
     height: 24px;
 }
 
-.TabLabelsWrapper {
+.TabLabelsWrapper, .TabLabelsWrapper-Mobile {
     border-bottom: 1px solid rgb(238, 238, 238);
     padding: 20px 0px;
     white-space: nowrap;
@@ -286,20 +286,30 @@ div.FrequentPageWrapper {
     margin-right: 20px;
 }
 
-.TabLabelsWrapper a {
+.TabLabelsWrapper a, .TabLabelsWrapper-Mobile a {
     outline: none;
     text-decoration: none;
     color: black;
 }
 
 .TabLabel-Selected, .TabLabel-Selected a {
-    color: rgb(51, 151, 255);
+    color: rgb(51, 151, 255) !important;
     cursor: pointer;
 }
 
 .TabLabel-Unselected, .TabLabel-Unselected a {
     color: black;
     cursor: pointer;
+}
+
+.FAQ-FadeWrapper2, .FAQ-FadeWrapper3, .FAQ-FadeWrapper4, .FAQ-FadeWrapper5,
+.FAQ-FadeWrapper6, .FAQ-FadeWrapper7 {
+    display: none;
+}
+
+.FAQ-FadeWrapper-Mobile2, .FAQ-FadeWrapper-Mobile3, .FAQ-FadeWrapper-Mobile4, 
+.FAQ-FadeWrapper-Mobile5, .FAQ-FadeWrapper-Mobile6, .FAQ-FadeWrapper-Mobile7 {
+    display: none;
 }
 
 .FAQListWrapper {
