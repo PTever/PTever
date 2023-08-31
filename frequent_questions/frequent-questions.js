@@ -195,12 +195,12 @@ const replyContents = document.querySelectorAll(".FAQ-ReplyWrapper");
 for(let i = 0; i < questions.length; i++){
     questions[i].addEventListener("click", (e) => {
         e.preventDefault();
-        if(e.target.parentNode.style.borderBottom != "none"){
-            e.target.parentNode.style.borderBottom = "none";
+        if(e.target.style.borderBottom != "none"){
+            e.target.style.borderBottom = "none";
             e.target.style.fontWeight = "bolder";
             replyContents[i].style.display = "block";
         } else {
-            e.target.parentNode.style.borderBottom = "1px solid rgb(230, 230, 230)";
+            e.target.style.borderBottom = "1px solid rgb(230, 230, 230)";
             e.target.style.fontWeight = "bold";
             replyContents[i].style.display = "none";
         }
@@ -216,12 +216,12 @@ const replyContentsM = document.querySelectorAll(".FAQ-ReplyWrapper-Mobile");
 for(let i = 0; i < questionsM.length; i++){
     questionsM[i].addEventListener("click", (e) => {
         e.preventDefault();
-        if(e.target.parentNode.style.borderBottom != "none"){
-            e.target.parentNode.style.borderBottom = "none";
+        if(e.target.style.borderBottom != "none"){
+            e.target.style.borderBottom = "none";
             e.target.style.fontWeight = "bolder";
             replyContentsM[i].style.display = "block";
         } else {
-            e.target.parentNode.style.borderBottom = "1px solid rgb(230, 230, 230)";
+            e.target.style.borderBottom = "1px solid rgb(230, 230, 230)";
             e.target.style.fontWeight = "bold";
             replyContentsM[i].style.display = "none";
         }

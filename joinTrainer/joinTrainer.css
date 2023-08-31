@@ -266,6 +266,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     width: 90px;
 }
 
+.JoinTrainer-HeaderLogoWrapper-Mobile {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 65px;
+}
+
 .JoinTrainer-LogoImage {
     width: 100%;
 }
@@ -281,6 +288,17 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 .JoinTrainer-HeaderButton {
     font-size: 16px;
+    letter-spacing: -0.4px;
+    font-weight: bold;
+    color: rgb(51, 51, 51);
+}
+
+.JoinTrainer-HeaderButton-Mobile:first-child {
+    margin-left: 0px;
+}
+
+.JoinTrainer-HeaderButton-Mobile {
+    font-size: 14px;
     letter-spacing: -0.4px;
     font-weight: bold;
     color: rgb(51, 51, 51);
@@ -309,12 +327,30 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     width: 100%;
 }
 
+.JoinTrainer-MainBannerContentWrapper-Mobile {
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    justify-content: center;
+    max-width: 1100px;
+    width: 100%;
+}
+
 .MainBanner-TitleWrapper {
     text-align: left;
 }
 
 .MainBanner-TitleContentTop {
     font-size: 45px;
+    font-weight: normal;
+    line-height: 1.3;
+    letter-spacing: -1.15px;
+    color: rgb(255, 255, 255);
+}
+
+.MainBanner-TitleContentTop-Mobile {
+    font-size: 26px;
     font-weight: normal;
     line-height: 1.3;
     letter-spacing: -1.15px;
@@ -329,6 +365,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-weight: bold;
 }
 
+.MainBanner-TitleContentBold-Mobile {
+    font-size: 26px;
+    letter-spacing: -1.15px;
+    color: rgb(255, 255, 255);
+    line-height: 1.3;
+    font-weight: bold;
+}
+
 .MainBanner-TitleContentSmall {
     margin: 16px 0px 40px;
     font-size: 16px;
@@ -337,8 +381,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     color: rgb(255, 255, 255);
 }
 
+.MainBanner-TitleContentSmall-Mobile {
+    margin: 16px 0px 160px;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.4px;
+    color: rgb(255, 255, 255);
+}
+
 .MainBanner-ApplyButtonWrapper {
     text-align: left;
+}
+
+.MainBanner-ApplyButtonWrapper-Mobile {
+    text-align: center;
 }
 
 .MainBanner-ApplyButton {
@@ -371,6 +427,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding-top: 2px;
 }
 
+.MainBanner-ApplyButtonImage-Mobile {
+    width: 16px;
+    padding-left: 6px;
+    padding-top: 2px;
+}
+
+
 .JoinTrainer-FirstDetailWrapper {
     padding: 60px 0px 50px;
     display: flex;
@@ -381,6 +444,16 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     color: rgb(51, 51, 51);
 }
 
+.JoinTrainer-FirstDetailWrapper-Mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    padding: 60px 0px 40px;
+}
+
 .FirstDetailTitle {
     font-size: 36px;
     font-weight: normal;
@@ -389,12 +462,31 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     display: block;
 }
 
+.FirstDetailTitle-Mobile {
+    font-size: 26px;
+    line-height: 1.36;
+    letter-spacing: -1px;
+    display: block;
+    font-weight: normal;
+}
+
 .FirstDetailContent {
     font-weight: normal;
     margin-top: 24px;
     font-size: 18px;
     line-height: 1.7;
     letter-spacing: -0.45px;
+    color: rgb(102, 102, 102);
+    display: block;
+    padding: 0px 20px;
+}
+
+.FirstDetailContent-Mobile {
+    font-weight: normal;
+    margin-top: 24px;
+    font-size: 15px;
+    line-height: 1.7;
+    letter-spacing: -0.6px;
     color: rgb(102, 102, 102);
     display: block;
     padding: 0px 20px;
@@ -409,6 +501,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     margin: 0px auto;
 }
 
+.JoinTrainer-CurrentCountsWrapper-Mobile {
+    display: block;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0px auto;
+    padding-bottom: 0px;
+}
+
 .CurrentCounts-ContentWrapper {
     padding: 0px;
     text-align: center;
@@ -418,7 +518,23 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     flex-basis: 33%;
 }
 
+.CurrentCounts-ContentWrapper-Mobile {
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    color: rgb(51, 51, 51);
+    padding-bottom: 50px;
+    flex-basis: 33%;
+}
+
 .CurrentCounts-Title {
+    font-size: 55px;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+.CurrentCounts-Title-Mobile {
     font-size: 55px;
     line-height: 1.2;
     font-weight: 800;
@@ -455,6 +571,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     width: 100%;
 }
 
+.JoinTrainer-PointsTopContentWrapper-Mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .FirstPointWrapper {
     border: none;
     display: inline-block;
@@ -463,9 +585,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     border-bottom: 1px solid rgb(244, 244, 244);
 }
 
+.FirstPointWrapper-Mobile {
+    border: none;
+    padding: 12px 20px;
+}
+
 .FirstPointContents {
     width: 272px;
     padding: 0px;
+    margin-bottom: 10px;
+}
+
+.FirstPointContents-Mobile {
+    width: 100%;
+    padding: 10px 0px;
     margin-bottom: 10px;
 }
 
@@ -544,6 +677,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     padding-top: 2px;
 }
 
+.Middle-ApplyButtonImage-Mobile {
+    width: 16px;
+    padding-left: 6px;
+    padding-top: 2px;
+}
+
 .JoinTrainer-ProcessWrapper {
     padding-bottom: 100px;
     width: 100%;
@@ -560,8 +699,25 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     color: rgb(51, 51, 51);
 }
 
+.ProcessTitleWrapper-Mobile {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
+    color: rgb(51, 51, 51);
+    padding: 60px 0px 40px;
+}
+
 .ProcessTitle {
     font-size: 36px;
+    line-height: 1.36;
+    letter-spacing: -1px;
+    display: block;
+}
+
+.ProcessTitle-Mobile {
+    font-size: 26px;
     line-height: 1.36;
     letter-spacing: -1px;
     display: block;
@@ -572,6 +728,16 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     font-size: 18px;
     line-height: 1.7;
     letter-spacing: -0.45px;
+    color: rgb(102, 102, 102);
+    display: block;
+    padding: 0px 20px;
+}
+
+.ProcessContent-Mobile {
+    margin-top: 24px;
+    font-size: 15px;
+    line-height: 1.7;
+    letter-spacing: -0.6px;
     color: rgb(102, 102, 102);
     display: block;
     padding: 0px 20px;
@@ -590,16 +756,34 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     justify-content: space-around;
 }
 
+.ProcessProcessWrapper-Mobile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .ProcessEachWrapper {
     text-align: center;
     display: inline-block;
     margin-bottom: 0px;
 }
 
+.ProcessEachWrapper-Mobile {
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 45px;
+}
+
 .ProcessEachTitleWrapper {
     width: 100%;
     text-align: center;
     display: inline-block;
+}
+
+.ProcessEachTitleWrapper-Mobile {
+    width: 100%;
+    text-align: center;
+    display: block;
 }
 
 .ProcessImageWrapper {
@@ -994,4 +1178,23 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     letter-spacing: -0.33px;
     color: rgb(102, 102, 102);
     padding-left: 2.5px;
+}
+
+/* 미디어 쿼리 */
+.pc {
+    display: block;
+}
+
+.mobile {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .pc {
+        display: none;
+    }
+    
+    .mobile {
+        display: block;
+    }
 }
