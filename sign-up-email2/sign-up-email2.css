@@ -505,12 +505,19 @@ p, label {
     margin: 0px;
 }
 
-.item-CheckArea {
+/* .item-CheckArea-all, .item-CheckArea-term, .item-CheckArea-marketing {
     display: flex;
     -webkit-box-align: center;
     align-items: center;
     padding: 0px;
-}
+} */
+
+/* .check_label_all, .check_label_term {
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+} */
 
 .item-checkBox {
     margin-right: 12px;

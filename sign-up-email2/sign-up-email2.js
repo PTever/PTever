@@ -75,3 +75,27 @@ inputCertificationNumMobile.addEventListener("keyup", (e) => {
         certificationBtn2Mobile.disabled = true;
     }
 });
+
+
+
+// 모두 동의
+NodeList.prototype.map = Array.prototype.map;
+
+// 전체 동의를 완성하라.
+const all = document.querySelector("input#check_all");
+const terms = document.querySelectorAll("input.check_term");
+
+all.addEventListener("click", () => {
+  terms.forEach((term) => {
+    term.checked = all.checked;
+  });
+
+});
+
+terms.forEach((term) => {
+  term.addEventListener("click", (e) => {
+    all.checked =
+      terms.map((term) => term.checked).filter((checked) => checked)
+        .length === 3;
+  });
+});
