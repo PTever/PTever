@@ -1,8 +1,12 @@
-$('.banner-BackgroundWrapper-mobile>ul>li').hide();
-$('.banner-BackgroundWrapper-mobile>ul>li:first-child').show();
+const $images = $(".img-slider img");
+let count = 0;
+$images.hide();
+$images.eq(count).show();
 
 setInterval(function() {
-    $('.banner-BackgroundWrapper-mobile>ul>li:first-child').fadeOut()
-    .next().fadeIn().end(1000)
-    .appendTo('.banner-BackgroundWrapper-mobile>ul')
-},3000);
+    $images.eq(count++).fadeOut();
+    if(count == 8){
+        count = 0;
+    }
+    $images.eq(count).fadeIn();
+},  3000);
