@@ -152,91 +152,45 @@ div.MyReviewWrapper {
   height: 100%;
 }
 
-/* 후기 이미지 여러개 있을 때 css */
-
-.RatioImageBannerWrapper {
-  border-radius: 20px;
-  overflow: hidden;
-  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVgAAAFYBAMAAADkQvlzAAAAG1BMVEXw8PDNzc2rq6v///+dnZ3n5+e5ubnDw8Pa2trW6dAZAAAE90lEQVR42u3bTU/jVhSHcWeCg5e5FdQswTLJLJGiSl1mLCdhaVAiZhkQRSxjFBqWZhqm+di9L36LGXVVV5f2+WmGZJQM/uf4nHsdFBwHAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP4zuiPpgrD/vJFG2LbCXnycliVsa13wQZqWsO227Mdo2g8VdjSyvw+6Hydstzrt9oeterQ70k3btbhpawP1Kv4YXbyKbHTxZvMKoO9eCSFOhP5yYn1YUWN7WLceNrH8CtYTIhXmrxB9y8N2RB7VtzVst1pYr6omSO2csFpYU9KiD+wO65qgqcUT9suuO/p1Nxolar6qLhAisy+r+xScvQbB45/nZr5yvpUT5gW5MzVfvi6q6VwLJ6xXhA3khUFRVN0JFoa9LsO+iXK2TGD7JuypDPtcrVqGfRN2Z5JGsmmroqZ2Tpicr1BHLcNW1T22d76CVFaz3BLUzYu98xXU29XEtS3sT2XWQbkQ+MXqldk5X7Jxh6K5Gtg2YV5QDpicr9Svd0Fq24QdVi17W9sQ8vqe2Dtffm3h8m180/itMV+NPshsm6+oFjYV+5GtCuvmW22o58uvvVNI7dvDfjRf9V3BqglrbLbldPki/2PnfAWieRlj3ZvGar6GQtTe0ZSR+7bNl97BhlVJ/fKnB75NYTvN+fKbQ3Zi6XzV333pqupS2zlffvUTRN/KCXsyHVtdzKb7X2zacN08amQWg8Y7Bd+u5cD70f5Vu+jybZqw3t9ttkLY+jMkAAAAAAAAAAAAAABK3oP0mH9sY6l+TVGcdCb6kcxxjhLzrJm56Y3N7Rf9+ObYcabq3rr8bvnzP522E/ZwttlsXswve/0ss4RRFOmwbhwn6uC/PzysZNiOek0y7PeHh99M2PUgzpyBfuZKBVyZsPL5y9bC5sVyF4vFjbyvjq7DHny+HquDRw93Yxn2MAiDMx32bqLDujNVQFXZ7XAqC3qwNGHDNsNOZMqF48zjMI5Oa2G3fe9SHXyoXs/MBNFt0BnrsJ1LpxOHMuy3aXI0S5xPedigzTaIJXnIed/8Oyh6Vh53Zr40wvZOy7CzzdTpTVVvT8rKthlWnX5dWTVg547zFEYDHfZeVble2XVmwsqXpdsgSrZL2QaunqlGZc+TVhaD4rMuN5v1cPOsDrR0irDBXmXvVybsOnHiSIWOZasOig/cJ3uVjSetdEGkqVLpoy0W1487f2LWo73KutFEh5WD5UxT9X93snxnjr/Rkr3Kfs7aXG63sTbWt0PTs+5ez/YmkQ47P8/X2c7SO+3JTlef8btJ/pWeda7ugtskb91FIm8T0wbzlbypVXadbVcyrBsmedjDcWd8sHJ0um3mHDyKza0Ku9j51y2F9eJUrOXBv6udrG82KW+id4v1UoWNg0Cvs3JfmMkHry+LHUyuI+O5TBWqk5HJPo0HL2qdlYvLt5bC6jMWmrD3p9WOKteFmd7BZE/2ZVi1tAn5oCpsHnZyNb6X0QN5Ro6ycrtVS4v8pr1ZG2Hlgb9O861fhb3c7XZvjb1ehnXza4NFeW0g2+DyS5gUbdC4NmglrHsvt67nWlh1Umfvw76/kFHbyWq+LNqg/vxeWwPm7ERRSK//bvrysPlnDr0803G+nVypLeGrPBW7ZO/5XqsrFwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD8z/wFfGVO0kiS990AAAAASUVORK5CYII=);
-  background-color: rgb(242, 243, 246);
-  cursor: pointer;
-  backface-visibility: hidden;
-  transform: translate3d(0px, 0px, 0px);
-}
-
-.RatioImageBannerWrapper div {
-  padding-bottom: initial;
-  height: 100%;
-}
-
-.slickSlider {
-  visibility: visible;
-}
-
-.ReviewImagePrevArrow {
-  z-index: 1;
-  width: 50px !important;
-  height: 50px !important;
-  transform: rotate(180deg) translate(0px, 50%) !important;
-  left: 10px;
-}
-
-.slickSlider .slickTrack,
-.slickSlider .slickList {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.slickList {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-.slickTrack {
-  position: relative;
-  top: 0;
-  left: 0;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.slickCurrent {
-  display: block;
-}
-
-/* before*/
-.ReviewImagePrevArrow:before,
-.ReviewImageNextArrow:before {
-  font-family: "slick";
-  font-size: 20px;
-  line-height: 1;
-  opacity: 0.75;
-  color: white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.ReviewImagePrevArrow-disabled:before,
-.ReviewImageNextArrow-disabled:before {
-  opacity: 0.25;
-}
-/* 끝 */
 
 .ReviewImageLoaderWrapper {
   display: none;
 }
 
+.ReviewImageWrapper {
+  display: flex;
+}
+
+
+
 .ReviewImage {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.ImageArrowButtonWrapper {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.ReviewImagePrevArrow {
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  width: 35px;
+  left: 10px;
+  top: 45%;
+}
+
+.ReviewImageNextArrow {
+  position: absolute;
+  z-index: 1;
+  width: 35px;
+  right: 10px;
+  top: 45%;
 }
 
 .ReviewContentWrapper {
@@ -263,6 +217,7 @@ div.MyReviewWrapper {
   line-height: 14px;
   font-weight: 500;
   color: rgb(78, 89, 104);
+  margin-bottom: 30px;
 }
 
 Button.ActionGroupLikeButton {

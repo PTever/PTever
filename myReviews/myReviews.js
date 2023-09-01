@@ -26,3 +26,13 @@ heartImgContainer.forEach((container) => {
     }
   });
 });
+
+const wholeWrapper = document.querySelectorAll(".ImageArrowButtonWrapper");
+const prevButton = document.querySelector(".ReviewImagePrevArrow");
+const nextButton = document.querySelector(".ReviewImageNextArrow");
+const images = document.querySelectorAll(".ImageWrapper");
+
+
+  nextButton.addEventListener("click", () => {
+    images.children[0].style.transform = "translate(-360px)";
+  } )
