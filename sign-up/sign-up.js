@@ -5,7 +5,7 @@ $images.eq(count).show();
 
 setInterval(function() {
     $images.eq(count++).fadeOut();
-    if(count == 8){
+    if(count == 6){
         count = 0;
     }
     $images.eq(count).fadeIn();
