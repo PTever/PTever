@@ -82,8 +82,8 @@ inputCertificationNumMobile.addEventListener("keyup", (e) => {
 NodeList.prototype.map = Array.prototype.map;
 
 // 전체 동의를 완성하라.
-const all = document.querySelector("input#check_all");
-const terms = document.querySelectorAll("input.check_term");
+const all = document.querySelector("input[name=check-All]");
+const terms = document.querySelectorAll("input[name=check]");
 
 all.addEventListener("click", () => {
   terms.forEach((term) => {
@@ -96,6 +96,30 @@ terms.forEach((term) => {
   term.addEventListener("click", (e) => {
     all.checked =
       terms.map((term) => term.checked).filter((checked) => checked)
-        .length === 3;
+        .length == 3;
+  });
+});
+
+// 반응형
+
+// 모두 동의
+NodeList.prototype.map = Array.prototype.map;
+
+// 전체 동의를 완성하라.
+const allMobile = document.querySelector("input[name=check-All-mobile]");
+const termsMobile = document.querySelectorAll("input[name=check-mobile]");
+
+allMobile.addEventListener("click", () => {
+    termsMobile.forEach((term) => {
+    term.checked = allMobile.checked;
+  });
+
+});
+
+termsMobile.forEach((term) => {
+  term.addEventListener("click", (e) => {
+    allMobile.checked =
+    termsMobile.map((term) => term.checked).filter((checked) => checked)
+        .length == 3;
   });
 });
