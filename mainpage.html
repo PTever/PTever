@@ -18,6 +18,7 @@
     <!-- DOM TREE를 하나로 구성하기 위해서 전체를 감싸는 div태그입니다. -->
     <div id="root">
         <div class="RootWrapper">
+<<<<<<< HEAD:mainpage.html
             <!-- header태그로 감싼 후 section 태그 2개가 각각 위아래를 담당합니다. -->
             <!-- 클래스명은 원래 프립을 참고하여 최대한 직관적으로 정했습니다. -->
             <!-- 그리고 혹시나 다른 태그들 css 주시다가 겹치지 않도록 했습니다. -->
@@ -119,6 +120,49 @@
                     </div>
                 </section>
             </header>
+=======
+           
+            <div class="Padded">
+              <div class="WritePage_Wrapper">
+                <div class="WritePage_Header">
+                  <h1 font-size="20px"  class="LeftPageTitle">글쓰기</h1>
+
+
+                  <div class="checkBox_Wrapper">
+                    <div class="checkboxItem_Wrapper" id="freePost">
+                        <div class="CheckboxItem_Box" id="Box1"></div>
+                        <input type="radio" class="CheckboxItem_Input">
+                        <div>자유게시판</div>
+                    </div>
+    
+    
+                    <div class="checkboxItem_Wrapper" id="transaction">
+                        <div class="CheckboxItem_Box" id="Box2"></div>
+                        <input type="radio" class="CheckboxItem_Input" >
+                        <div>소도구 거래장터</div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <hr class="Hr">
+
+               
+                <div class="Fade_Wrapper" style="opacity: 1; display: block;">
+                <textarea placeholder="제목을 입력하세요." id="title"
+                class="WritePage_TitleArea"></textarea>
+                <hr class="Hr">
+                  <textarea placeholder="내용을 입력하세요." id="content"
+                  class="WritePage_TextArea"></textarea>
+
+                  <div class="WritePage_Footer">
+                    <button width="100%" color="white" font-size="13px" disabled
+                    class="buttonOff">등록하기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+>>>>>>> 9cd41c0e76cc7a8659fecbf228b6e09e128e9e31:write/write.html
         </div>
     </div>
 </body>
