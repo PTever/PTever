@@ -536,6 +536,13 @@ button {
     width: 100%;
 }
 
+.choose-Div {
+    margin-top: 20px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+}
 
 .accept-List span{
     margin-left: 10px;
@@ -547,31 +554,7 @@ button {
     left: 0;
 }
 
-input[class="check-Option-All"]:checked + .checkArea-Border {
-    border-width: 1px;
-    border-radius: 9999px;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    border-color: #b9b9bb;
-    background-color: rgb(0, 117, 239);
-    cursor: pointer;
-  }
-  
-  input[class="checkOption"]:checked + .checkArea-Border {
-    border-width: 1px;
-    border-radius: 9999px;
-    justify-content: center;
-    align-items: center;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    border-color: #b9b9bb;
-    background-color: rgb(0, 117, 239);
-    cursor: pointer;
-  }
+
 
 /* mobile */
 .mobile {
