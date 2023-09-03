@@ -3,8 +3,10 @@ const likeImage = button[0].querySelector("img"); // 이미지 엘리먼트 선�
 const count = button[0].querySelector("span");
 const commentForm = document.getElementById('commentForm');
 const cancelButton = commentForm.querySelector('.cancel');
-
 const commentButtom = document.getElementsByClassName('ButtonWrite');
+const imageButton = document.querySelectorAll('.Image');
+const iamgeBox = document.getElementById('imageForm');
+
 
 let clickCount= parseInt(count.textContent);
 button[0].addEventListener("click", function(){
@@ -30,3 +32,26 @@ commentButtom[0].addEventListener("click", function(){
 cancelButton.addEventListener('click', function() {
   commentForm.style.display = 'none'; // 취소 버튼을 클릭하면 form을 숨기게 설정
 });
+
+// 이미지 클릭 이벤트를 처리하는 함수
+function handleImageClick(event) {
+
+  // 클릭된 이미지의 URL을 가져옵니다.
+  const clickedImageUrl = event.target.src;
+
+
+  // Image_StyledImage 클래스의 이미지 엘리먼트를 선택합니다.
+  const imageStyledImage = document.querySelector('.imageBox_Styled');
+
+  // 이미지 엘리먼트의 src 속성을 클릭된 이미지의 URL로 변경합니다.
+  imageStyledImage.src = clickedImageUrl;
+
+  // 이미지 박스를 표시합니다.
+  iamgeBox.style.display = 'block';
+}
+
+// 이미지 클릭 이벤트를 등록합니다.
+imageButton.forEach(image => {
+  image.addEventListener('click', handleImageClick);
+});
+

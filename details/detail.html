@@ -14,8 +14,51 @@
     <!-- 아래 링크 태그를 꼭 넣어주세요. (경로 조심) -->
     <link rel="stylesheet" href="./mainpage-header.css">
     <link rel="stylesheet" href="details.css">
+    
 </head>
 <body>
+    <style>
+        @media screen and (max-width: 767px){
+	div.wrap{
+        position: relative;
+    top: 50%;
+    left: 50%;
+    z-index: 13;
+    box-sizing: border-box;
+    padding: 16px 0;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 440px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    height: 26.3%;
+    }
+
+    .imageBox_Styled{
+        position: relative;
+    top: 50%;
+    left: 50%;
+    z-index: 13;
+    box-sizing: border-box;
+    border-radius: 3px;
+    max-width: 300px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    }
+
+    .imageWrap{
+        position: relative;
+    top: 50%;
+    left: 50%;
+    z-index: 13;
+    box-sizing: border-box;
+    border-radius: 3px;
+    max-width: 200px;
+    background-color: #fff;
+    transform: translate(-50%, -50%);
+    }
+}
+    </style>
     <!-- DOM TREE를 하나로 구성하기 위해서 전체를 감싸는 div태그입니다. -->
     <div id="root">
         <div class="RootWrapper">
@@ -74,24 +117,24 @@
                             <div class="detailContent_LikeButton">
                                 <button class="like_Button">
                                     <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E %3Cg fill='none' fill-rule='evenodd'%3E %3Cpath fill='none' d='M0 0h24v24H0z'/%3E %3Cpath fill='%23FFCD00' fill-rule='nonzero' d='M12 3h1v3h-1V3zm5.207 1.086l.707.707-2.121 2.121-.707-.707 2.121-2.121zm-10.121.707l.707-.707 2.121 2.121-.707.707-2.121-2.121z'/%3E %3Cpath fill='%23BBB' stroke='%23BBB' d='M4 22h4v-9H4z'/%3E %3Cpath stroke='%23BBB' d='M17.936 12h-3.958V9.388A1.38 1.38 0 0 0 12.6 8c-.497 0-.965.267-1.212.697L9 13H8v9h9.153a2 2 0 0 0 1.983-1.741l.783-6A2 2 0 0 0 17.936 12z'/%3E %3C/g%3E %3C/svg%3E"
-                                    class="like_Button_Icon">
+                                    class="like_Button_Icon" >
                                     <span>0</span>
                                 </button>
                             </div>
 
                             <div class="detailContent_ImageWrapper">
                                 <div class="Image_StyledWrapper">
-                                    <img class="Image_StyledImage" src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1692630896586_b1be811dd1857e7810d2931249a1abd3c68ef28bf58f37d884d555c6f4ce1d9e"
+                                    <img class="Image_StyledImage Image" src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1692630896586_b1be811dd1857e7810d2931249a1abd3c68ef28bf58f37d884d555c6f4ce1d9e"
                                     >
                                 </div>
 
                                 <div class="Image_StyledWrapper">
-                                    <img class="Image_StyledImage" src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1692630897020_9fa2aad18562fc4742896abd0bd6512c2c752ff61b0c42e03fa99d380f117ae8"
+                                    <img class="Image_StyledImage Image" src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1692630897020_9fa2aad18562fc4742896abd0bd6512c2c752ff61b0c42e03fa99d380f117ae8"
                                     >
                                 </div>
 
                                 <div class="Image_StyledWrapper">
-                                    <img class="Image_StyledImage" src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1692630897435_79fd91cc530fd59631fd0703321a22b679e154fbaac3967abdeb0947c01e0dc8"
+                                    <img class="Image_StyledImage Image" src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1692630897435_79fd91cc530fd59631fd0703321a22b679e154fbaac3967abdeb0947c01e0dc8"
                                     >
                                 </div>
                             </div>
@@ -189,46 +232,24 @@
             </div>
         </form>
 
-        <div>
-            <div id="lightboxBackdrop" class="container">
-                <div>
-                    <div class="content" style="margin-bottom: 0px; max-width: 1024px;">
-                        <div class="header">
-                            <span></span>
-                        </div>
+        <form class="imageStyled_Box" id="imageForm">
+            <div class="backdrop"></div>
 
-                        <figure class="figure">
-                            <img class="image_web_Loaded" src="https://res.cloudinary.com/frientrip/image/upload/ar_1:1,c_fill,dpr_2,f_auto,q_auto,w_600/photo_1692630896586_b1be811dd1857e7810d2931249a1abd3c68ef28bf58f37d884d555c6f4ce1d9e" 
-                            style="cursor: auto; max-height: calc(100vh - 90px);">
-                        </figure>
+            <div class="header">
+                <span></span>
 
-                        <div class="spinner">
-                            <div title role="button" aria-label="animation" tabindex="0" 
-                            style="width: 50px; height: 100%; overflow: hidden; margin: 0px auto; outline: none;">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300"
-                                height="300" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
-                            
-                            </svg>
-                        </div>
-                        </div>
-
-                        <div class="footer">
-                            <span></span>
-
-                            <div class="footerCount">
-                                1/3
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type="button" class="arrow_rightDerection" title="Previous">
-                        <span>
-                            
-                        </span>
-                    </button>
-                </div>
+                <button class="close">
+                    <div class="closeButton"></div>
+                </button>
             </div>
-        </div>
+            
+            <div class="imageWrap">
+                
+                <img class="imageBox_Styled">
+            </div>
+        </form>
+
+        
 
 
     </div>
