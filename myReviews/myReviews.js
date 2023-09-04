@@ -1,3 +1,4 @@
+// 후기 삭제 버튼 마우스 오버시 이미지 변경
 const deleteImgContainer = document.querySelectorAll(".ReviewDeleteButton");
 
 deleteImgContainer.forEach((container) => {
@@ -11,6 +12,7 @@ deleteImgContainer.forEach((container) => {
   });
 });
 
+// 좋아요 버튼 클릭시 이미지 변경 및 span 태그 숫자 1로 변경(DB 연동하면 숫자 가지고 와야 함)
 const heartImgContainer = document.querySelectorAll(".ActionGroupLikeButton");
 
 heartImgContainer.forEach((container) => {
@@ -27,12 +29,12 @@ heartImgContainer.forEach((container) => {
   });
 });
 
+// 후기 사진 화살표 클릭시 다음 사진으로 이동하는 js(수정 필요)
 const wholeWrapper = document.querySelectorAll(".ImageArrowButtonWrapper");
 const prevButton = document.querySelector(".ReviewImagePrevArrow");
 const nextButton = document.querySelector(".ReviewImageNextArrow");
 const images = document.querySelectorAll(".ImageWrapper");
 
-
-  nextButton.addEventListener("click", () => {
-    images.children[0].style.transform = "translate(-360px)";
-  } )
+nextButton.addEventListener("click", () => {
+  images.children[0].style.transform = "translate(-360px)";
+});
