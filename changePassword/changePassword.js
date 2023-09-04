@@ -107,3 +107,11 @@ changeButton.addEventListener("mouseover", (e) => {
     e.target.style.cursor = "not-allowed";
   }
 });
+
+const inputTags = document.querySelectorAll(".registerPage-Form");
+
+inputTags.forEach((inputTag) => {
+  inputTag.addEventListener("focus", (e) => {
+    e.target.style.border = "blue";
+  });
+});

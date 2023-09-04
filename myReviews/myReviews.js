@@ -34,7 +34,32 @@ const wholeWrapper = document.querySelectorAll(".ImageArrowButtonWrapper");
 const prevButton = document.querySelector(".ReviewImagePrevArrow");
 const nextButton = document.querySelector(".ReviewImageNextArrow");
 const images = document.querySelectorAll(".ImageWrapper");
+let count = 0;
 
 nextButton.addEventListener("click", () => {
-  images.children[0].style.transform = "translate(-360px)";
+  images.forEach((image) => {
+    count++;
+    image.style.transition = "transform 0s";
+    image.style.transform = "translate(-" + 368.63 * count + "px)";
+    if (count > 2) {
+      count = 2;
+      image.style.transition = "transform 0s";
+      image.style.transform = "translate(-737.26px)";
+    }
+  });
+});
+
+prevButton.addEventListener("click", () => {
+  images.forEach((image) => {
+    --count;
+    if (count === 1) {
+      image.style.transition = "transform 0s";
+      image.style.transform = "translate(-368.63px)";
+    } else if (count === 0) {
+      image.style.transition = "transform 0s";
+      image.style.transform = "translate(0px)";
+    } else if (count < 0) {
+      count = 0;
+    }
+  });
 });

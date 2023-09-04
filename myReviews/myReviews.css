@@ -93,6 +93,7 @@ div.MyReviewWrapper {
 
 .ImageWrapper {
   min-height: 1px;
+  display: flex;
 }
 
 .ServiceImage {
@@ -152,7 +153,6 @@ div.MyReviewWrapper {
   height: 100%;
 }
 
-
 .ReviewImageLoaderWrapper {
   display: none;
 }
@@ -160,8 +160,6 @@ div.MyReviewWrapper {
 .ReviewImageWrapper {
   display: flex;
 }
-
-
 
 .ReviewImage {
   position: relative;
