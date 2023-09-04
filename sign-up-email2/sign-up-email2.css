@@ -430,6 +430,9 @@ button {
     margin: 4px 0px 8px;
 }
 
+
+
+
 /* .signUp-Btn {
     width: 100%;
     height: 56px;
@@ -472,6 +475,11 @@ button {
     margin: 15px 0px 30px;
 }
 
+.agreement-Btn:disabled {
+    background-color: rgb(181, 197, 214);
+    color: rgb(244, 244, 244);
+    cursor: not-allowed;
+}
 
 
 .sheet-Layout {
@@ -663,7 +671,11 @@ button {
     margin: 4px 0px 8px;
 }
 
-
+.agreement-Btn-mobile:disabled {
+    background-color: rgb(181, 197, 214);
+    color: rgb(244, 244, 244);
+    cursor: not-allowed;
+}
 
 .agreement-Btn-mobile {
     width: 100%;
