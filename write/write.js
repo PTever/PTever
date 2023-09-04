@@ -11,7 +11,6 @@ const checkbox = Array.from(document.getElementsByClassName('checkboxItem_Wrappe
 
 
 
-
 // 버튼 키고 끄기
 function buttonOn(button){
   button.querySelector('.CheckboxItem_Box').classList.add('CheckboxItem_Box_Select');
@@ -33,24 +32,20 @@ function buttonOff(button){
   }
 }
 
-// 게시판 글 선택
+
 checkbox.forEach(button => {
-  button.addEventListener("click", function(){
-    if (button.querySelector('.CheckboxItem_Box')) {
+  button.addEventListener("click", function() {
+    if (button.querySelector('.CheckboxItem_Box_Select')) {
+      return true;
+    } else if (button.querySelector('.CheckboxItem_Box')) {
       buttonOn(button);
-      // 다른 버튼을 선택한 경우에는 이전 버튼을 off로 변경
       checkbox.forEach(otherButton => {
-        if (otherButton !== button) {
+        if (otherButton !== button && otherButton.querySelector('.CheckboxItem_Box_Select')) {
           buttonOff(otherButton);
         }
-        return true;
       });
-    } else {
-      buttonOff(button);
-      return false;
     }
-
-  })
+  });
 });
 
 
