@@ -16,6 +16,8 @@ const all = document.querySelector("input[name=check-All]");
 const terms = document.querySelectorAll("input[name=check]");
 const allMobile = document.querySelector("input[name=check-All-mobile]");
 const termsMobile = document.querySelectorAll("input[name=check-mobile]");
+// 모든 입력 필드 요소를 선택합니다.
+
 
 // 휴대폰 번호 입력시 인증번호 전송 버튼 disabled 사라지게 하는 js
 inputPhoneNum.addEventListener("keyup", (e) => {
@@ -132,3 +134,6 @@ termsMobile.forEach((term) => {
 // } else {
 //     allAgreeBtn.disabled = true;
 // }
+
+
+
