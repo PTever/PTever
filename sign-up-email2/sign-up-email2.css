@@ -459,84 +459,7 @@ button {
     margin: 4px 0px 8px;
 }
 
-/* 이용약관 */
-.sheet-Layout {
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    margin: 0px auto;
-    z-index: 3001;
-    width: 100%;
-    max-width: 768px;
-}
 
-.accept-Sheet {
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    margin: 0px auto;
-    z-index: 3001;
-    width: 100%;
-    max-width: 768px;
-}
-
-.acaccept-Sheet-Header {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 28px;
-    color: rgb(51, 51, 51);
-    padding: 12px 0px;
-}
-
-.accept-List-Wrapper {
-    padding: 10px 0px;
-}
-
-.accept-List-Wrapper > * {
-    margin-bottom: 6px;
-}
-
-.accept-Item-Wrapper {
-    font-size: 14px;
-    line-height: 20px;
-    display: flex;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-}
-
-p, label {
-    margin: 0px;
-}
-
-.item-CheckArea {
-    display: flex;
-    -webkit-box-align: center;
-    align-items: center;
-    padding: 0px;
-}
-
-.item-checkBox {
-    margin-right: 12px;
-    pointer-events: none;
-}
-
-[tabindex] {
-    touch-action: manipulation;
-}
-
-svg:not(:root) {
-    overflow: hidden;
-}
-
-svg {
-    fill: currentColor;
-    vertical-align: middle;
-}
-
-.item-Title {
-    overflow: hidden;
-    color: rgb(119, 119, 119);
-}
 
 .agreement-Btn {
     width: 100%;
@@ -559,7 +482,80 @@ svg {
 }
 
 
+.sheet-Layout {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px -10px 4px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px;
+    margin-top: 20px;
+}
 
+.accept-Box-Header {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 28px;
+    color: rgb(51, 51, 51);
+    padding: 12px 0px;
+}
+
+.accept-List {
+    padding: 10px 0px;
+}
+
+.accept-List > * {
+    margin-bottom: 6px;
+}
+
+.accept-All, .agreement-List, .personal-Info-List, .loaction-Service-List, .marketing-List {
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: left;
+}
+
+.agreement-List, .personal-Info-List, .loaction-Service-List, .marketing-List {
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    cursor: pointer;
+    flex: 1 1 0%;
+}
+
+.hr {
+    padding: 0px;
+    height: 1px;
+    border: none;
+    background-color: rgb(234, 237, 239);
+    margin: 18px 0px;
+}
+
+.essential-Div {
+    margin-top: 20px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.choose-Div {
+    margin-top: 20px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    width: 100%;
+}
+
+.accept-List span{
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+
+.checkArea-Border {
+    left: 0;
+}
 
 
 
@@ -693,6 +689,17 @@ svg {
     color: white;
     font-size: 16px;
     margin: 15px 0px 30px;
+}
+
+/* 약관 동의 */
+
+.sheet-Layout-mobile {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px -10px 4px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding: 20px;
+    margin-top: 20px;
 }
 
 
