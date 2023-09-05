@@ -62,7 +62,12 @@ inputCertificationNum.addEventListener("keyup", (e) => {
 
 // agreement
 
-
+function repeatCheck() {
+    const checkBox = document.getElementById("all");
+    if(checkBox.checked) {
+        agreementBtn.disabled = false;
+    } 
+}
 
 inputNickName.addEventListener("keyup", (e) => {
     if(!e.target.value || !inputPhoneNum.value || !inputCertificationNum.value) {
@@ -71,12 +76,14 @@ inputNickName.addEventListener("keyup", (e) => {
         noneDisabledCheckbox.forEach((check) => {
             check.disabled = true;
         });
+        agreementBtn.disabled = true;
     } else {
         globalThis.flag[2] = true;
         // 동의버튼은 input 3곳에 값이 다 들어가 있을 때 disabled가 해제되게 함
         noneDisabledCheckbox.forEach((check) => {
             check.disabled = false;
         });
+        repeatCheck();
     }
 
     if(globalThis.flag[2]) {
@@ -106,8 +113,8 @@ inputNickName.addEventListener("keyup", (e) => {
              }
             });
         });
+        
     }
-
 });
 
 inputPhoneNum.addEventListener("keyup", (e) => {
@@ -117,12 +124,14 @@ inputPhoneNum.addEventListener("keyup", (e) => {
         noneDisabledCheckbox.forEach((check) => {
             check.disabled = true;
         });
+        agreementBtn.disabled = true;
     } else {
         globalThis.flag[2] = true;
         // 동의버튼은 input 3곳에 값이 다 들어가 있을 때 disabled가 해제되게 함
         noneDisabledCheckbox.forEach((check) => {
             check.disabled = false;
         });
+        repeatCheck();
     }
 
     if(globalThis.flag[2]) {
@@ -152,7 +161,8 @@ inputPhoneNum.addEventListener("keyup", (e) => {
              }
             });
         });
-    }
+    } 
+
 
 });
 
@@ -164,12 +174,14 @@ inputCertificationNum.addEventListener("keyup", (e) => {
         noneDisabledCheckbox.forEach((check) => {
             check.disabled = true;
         });
+        agreementBtn.disabled = true;
     } else {
         globalThis.flag[2] = true;
         // 동의버튼은 input 3곳에 값이 다 들어가 있을 때 disabled가 해제되게 함
         noneDisabledCheckbox.forEach((check) => {
             check.disabled = false;
         });
+        repeatCheck();
     }
 
     if(globalThis.flag[2]) {
@@ -200,6 +212,7 @@ inputCertificationNum.addEventListener("keyup", (e) => {
             });
         });
     }
+
 
 });
 
