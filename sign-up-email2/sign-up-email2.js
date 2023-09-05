@@ -11,6 +11,7 @@ const agreementBtn = document.querySelector(".agreement-Btn");
 // 모두 동의
 const all = document.querySelector("input[name=check-All]");
 const terms = document.querySelectorAll("input[name=check]");
+const noneDisabledCheckbox = document.querySelectorAll("input[type=checkbox]");
 
 // mobile
 const inputNickNameMobile = document.querySelector(".form-InputNickName-mobile");
@@ -24,6 +25,7 @@ const agreementBtnMobile = document.querySelector(".agreement-Btn-mobile");
 // mobile
 const allMobile = document.querySelector("input[name=check-All-mobile]");
 const termsMobile = document.querySelectorAll("input[name=check-mobile]");
+const noneDisabledCheckboxMobile = document.querySelectorAll("input[type=checkbox]");
 
 
 
@@ -61,47 +63,49 @@ inputCertificationNum.addEventListener("keyup", (e) => {
 // agreement
 
 
-// function checkAgreement() {
-//     all.addEventListener("click", (e) => {
-//         const checked = e.target.checked;
-//         if(checked) {
-//             terms.forEach((term) => {
-//                 term.checked = true;
-//             });
-//             agreementBtn.disabled = false;
-//         } else {
-//             terms.forEach((term) => {
-//                 term.checked = false;
-//             });
-//             agreementBtn.disabled = true;
-//         }
-//     });
-
-//     terms.forEach((term) => {
-//         term.addEventListener("click", (e) => {
-//          all.checked = terms.map((term) => term.checked).filter((checked) => checked).length == 3;
-//          if(all.checked) {
-//             agreementBtn.disabled = false;
-//          } else {
-//             all.checked = false;
-//             agreementBtn.disabled = true;
-//          }
-//         });
-//     });
-    
-// }
-
-
 
 inputNickName.addEventListener("keyup", (e) => {
     if(!e.target.value || !inputPhoneNum.value || !inputCertificationNum.value) {
         globalThis.flag[2] = false;
+        // 아닌 경우 disabled = true
+        noneDisabledCheckbox.forEach((check) => {
+            check.disabled = true;
+        });
     } else {
         globalThis.flag[2] = true;
+        // 동의버튼은 input 3곳에 값이 다 들어가 있을 때 disabled가 해제되게 함
+        noneDisabledCheckbox.forEach((check) => {
+            check.disabled = false;
+        });
     }
 
     if(globalThis.flag[2]) {
-        checkAgreement();
+        all.addEventListener("click", (e) => {
+            const checked = e.target.checked;
+            if(checked) {
+                terms.forEach((term) => {
+                    term.checked = true;
+                });
+                agreementBtn.disabled = false;
+            } else {
+                terms.forEach((term) => {
+                    term.checked = false;
+                });
+                agreementBtn.disabled = true;
+            }
+        });
+    
+        terms.forEach((term) => {
+            term.addEventListener("click", () => {
+             all.checked = terms.map((term) => term.checked).filter((checked) => checked).length == 3;
+             if(all.checked) {
+                agreementBtn.disabled = false;
+             } else {
+                all.checked = false;
+                agreementBtn.disabled = true;
+             }
+            });
+        });
     }
 
 });
@@ -109,12 +113,45 @@ inputNickName.addEventListener("keyup", (e) => {
 inputPhoneNum.addEventListener("keyup", (e) => {
     if(!e.target.value || !inputNickName.value || !inputCertificationNum.value) {
         globalThis.flag[2] = false;
+        // 아닌 경우 disabled = true
+        noneDisabledCheckbox.forEach((check) => {
+            check.disabled = true;
+        });
     } else {
         globalThis.flag[2] = true;
+        // 동의버튼은 input 3곳에 값이 다 들어가 있을 때 disabled가 해제되게 함
+        noneDisabledCheckbox.forEach((check) => {
+            check.disabled = false;
+        });
     }
 
     if(globalThis.flag[2]) {
-        checkAgreement();
+        all.addEventListener("click", (e) => {
+            const checked = e.target.checked;
+            if(checked) {
+                terms.forEach((term) => {
+                    term.checked = true;
+                });
+                agreementBtn.disabled = false;
+            } else {
+                terms.forEach((term) => {
+                    term.checked = false;
+                });
+                agreementBtn.disabled = true;
+            }
+        });
+    
+        terms.forEach((term) => {
+            term.addEventListener("click", () => {
+             all.checked = terms.map((term) => term.checked).filter((checked) => checked).length == 3;
+             if(all.checked) {
+                agreementBtn.disabled = false;
+             } else {
+                all.checked = false;
+                agreementBtn.disabled = true;
+             }
+            });
+        });
     }
 
 });
@@ -123,17 +160,52 @@ inputPhoneNum.addEventListener("keyup", (e) => {
 inputCertificationNum.addEventListener("keyup", (e) => {
     if(!e.target.value || !inputNickName.value || !inputPhoneNum.value) {
         globalThis.flag[2] = false;
+        // 아닌 경우 disabled = true
+        noneDisabledCheckbox.forEach((check) => {
+            check.disabled = true;
+        });
     } else {
         globalThis.flag[2] = true;
+        // 동의버튼은 input 3곳에 값이 다 들어가 있을 때 disabled가 해제되게 함
+        noneDisabledCheckbox.forEach((check) => {
+            check.disabled = false;
+        });
     }
 
     if(globalThis.flag[2]) {
-        checkAgreement();
+        all.addEventListener("click", (e) => {
+            const checked = e.target.checked;
+            if(checked) {
+                terms.forEach((term) => {
+                    term.checked = true;
+                });
+                agreementBtn.disabled = false;
+            } else {
+                terms.forEach((term) => {
+                    term.checked = false;
+                });
+                agreementBtn.disabled = true;
+            }
+        });
+    
+        terms.forEach((term) => {
+            term.addEventListener("click", () => {
+             all.checked = terms.map((term) => term.checked).filter((checked) => checked).length == 3;
+             if(all.checked) {
+                agreementBtn.disabled = false;
+             } else {
+                all.checked = false;
+                agreementBtn.disabled = true;
+             }
+            });
+        });
     }
 
 });
 
-// 모두 동의 체크 js 만든 후 닉네임 , 휴대폰 번호 입력 후 인증하기 까지 완료 해서 true로 바꾼다음 모두동의 or 동의까지 true &&이 true가 되면 모두 동의하고 가입하기 버튼 disabled 사라지게
+
+
+
 
 
 
@@ -174,46 +246,48 @@ inputCertificationNumMobile.addEventListener("keyup", (e) => {
 
 // 전체 동의를 완성하라.
 
-function checkAgreementMobile() {
-    allMobile.addEventListener("click", () => {
-        const checkedMobile = e.target.checked;
-        if(checkedMobile) {
-            termsMobile.forEach((term) => {
-                term.checked = true;
-            });
-            agreementBtnMobile.disabled = false;
-        } else {
-            terms.forEach((term) => {
-                term.checked = false;
-            });
-            agreementBtnMobile.disabled = true;
-        }
-    
-    });
-    
-    termsMobile.forEach((term) => {
-      term.addEventListener("click", (e) => {
-        allMobile.checked = termsMobile.map((term) => term.checked).filter((checked) => checked).length == 3;
-        if(allMobile.checked) {
-            agreementBtnMobile.disabled = false;
-         } else {
-            all.checked = false;
-            agreementBtnMobile.disabled = true;
-         }
-      });
-    });
-    
-}
+
 
 inputNickNameMobile.addEventListener("keyup", (e) => {
     if(!e.target.value || !inputPhoneNumMobile.value || !inputCertificationNumMobile.value) {
         globalThis.flag[5] = false;
+        noneDisabledCheckboxMobile.forEach((check) => {
+            check.disabled = true;
+        });
     } else {
         globalThis.flag[5] = true;
+        noneDisabledCheckboxMobile.forEach((check) => {
+            check.disabled = false;
+        });
     }
 
     if(globalThis.flag[5]) {
-        checkAgreement();
+        allMobile.addEventListener("click", (e) => {
+            const checkedMobile = e.target.checked;
+            if(checkedMobile) {
+                termsMobile.forEach((term) => {
+                    term.checked = true;
+                });
+                agreementBtnMobile.disabled = false;
+            } else {
+                termsMobile.forEach((term) => {
+                    term.checked = false;
+                });
+                agreementBtnMobile.disabled = true;
+            }
+        });
+    
+        termsMobile.forEach((term) => {
+            term.addEventListener("click", () => {
+             allMobile.checked = termsMobile.map((term) => term.checked).filter((checked) => checked).length == 3;
+             if(allMobile.checked) {
+                agreementBtnMobile.disabled = false;
+             } else {
+                allMobile.checked = false;
+                agreementBtnMobile.disabled = true;
+             }
+            });
+        });
     }
 
 });
@@ -221,12 +295,43 @@ inputNickNameMobile.addEventListener("keyup", (e) => {
 inputPhoneNumMobile.addEventListener("keyup", (e) => {
     if(!e.target.value || !inputNickNameMobile.value || !inputCertificationNumMobile.value) {
         globalThis.flag[5] = false;
+        noneDisabledCheckboxMobile.forEach((check) => {
+            check.disabled = true;
+        });
     } else {
         globalThis.flag[5] = true;
+        noneDisabledCheckboxMobile.forEach((check) => {
+            check.disabled = false;
+        });
     }
 
     if(globalThis.flag[5]) {
-        checkAgreement();
+        allMobile.addEventListener("click", (e) => {
+            const checkedMobile = e.target.checked;
+            if(checkedMobile) {
+                termsMobile.forEach((term) => {
+                    term.checked = true;
+                });
+                agreementBtnMobile.disabled = false;
+            } else {
+                termsMobile.forEach((term) => {
+                    term.checked = false;
+                });
+                agreementBtnMobile.disabled = true;
+            }
+        });
+    
+        termsMobile.forEach((term) => {
+            term.addEventListener("click", () => {
+             allMobile.checked = termsMobile.map((term) => term.checked).filter((checked) => checked).length == 3;
+             if(allMobile.checked) {
+                agreementBtnMobile.disabled = false;
+             } else {
+                allMobile.checked = false;
+                agreementBtnMobile.disabled = true;
+             }
+            });
+        });
     }
 
 });
@@ -235,22 +340,55 @@ inputPhoneNumMobile.addEventListener("keyup", (e) => {
 inputCertificationNumMobile.addEventListener("keyup", (e) => {
     if(!e.target.value || !inputNickNameMobile.value || !inputPhoneNumMobile.value) {
         globalThis.flag[5] = false;
+        noneDisabledCheckboxMobile.forEach((check) => {
+            check.disabled = true;
+        });
     } else {
         globalThis.flag[5] = true;
+        noneDisabledCheckboxMobile.forEach((check) => {
+            check.disabled = false;
+        });
     }
 
     if(globalThis.flag[5]) {
-        checkAgreement();
+        allMobile.addEventListener("click", (e) => {
+            const checkedMobile = e.target.checked;
+            if(checkedMobile) {
+                termsMobile.forEach((term) => {
+                    term.checked = true;
+                });
+                agreementBtnMobile.disabled = false;
+            } else {
+                termsMobile.forEach((term) => {
+                    term.checked = false;
+                });
+                agreementBtnMobile.disabled = true;
+            }
+        });
+    
+        termsMobile.forEach((term) => {
+            term.addEventListener("click", () => {
+             allMobile.checked = termsMobile.map((term) => term.checked).filter((checked) => checked).length == 3;
+             if(allMobile.checked) {
+                agreementBtnMobile.disabled = false;
+             } else {
+                allMobile.checked = false;
+                agreementBtnMobile.disabled = true;
+             }
+            });
+        });
     }
 
 });
 
 
-
-
-
+// test
 
 // allMobile.addEventListener("click", () => {
+//     const checkedMobile = e.target.checked;
+//     if(checkedMobile) {
+//         termsMobile.checked = true;
+//     }
 //     termsMobile.forEach((term) => {
 //     term.checked = allMobile.checked;
 //   });
@@ -265,10 +403,29 @@ inputCertificationNumMobile.addEventListener("keyup", (e) => {
 //   });
 // });
 
+// all.addEventListener("click", (e) => {
+//     const checked = e.target.checked;
+//     if(checked) {
+//         terms.forEach((term) => {
+//             term.checked = true;
+//         });
+//         agreementBtn.disabled = false;
+//     } else {
+//         terms.forEach((term) => {
+//             term.checked = false;
+//         });
+//         agreementBtn.disabled = true;
+//     }
+// });
 
-
-
-
-
-checkAgreement();
-checkAgreementMobile();
+// terms.forEach((term) => {
+//     term.addEventListener("click", () => {
+//      all.checked = terms.map((term) => term.checked).filter((checked) => checked).length == 3;
+//      if(all.checked) {
+//         agreementBtn.disabled = false;
+//      } else {
+//         all.checked = false;
+//         agreementBtn.disabled = true;
+//      }
+//     });
+// });

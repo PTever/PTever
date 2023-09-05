@@ -577,6 +577,9 @@ button {
     left: 0;
 }
 
+input[type="checkbox"]:disabled {
+    cursor: not-allowed;
+}
 
 
 /* mobile */
