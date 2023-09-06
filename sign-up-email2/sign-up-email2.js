@@ -225,6 +225,14 @@ inputCertificationNum.addEventListener("keyup", (e) => {
 // 반응형
 
 
+function repeatCheckMobile() {
+    const checkBoxMobile = document.getElementById("all-mobile");
+    if(checkBoxMobile.checked) {
+        agreementBtnMobile.disabled = false;
+    } 
+}
+
+
 // 휴대폰 번호 입력시 인증번호 전송 버튼 disabled 사라지게 하는 js
 inputPhoneNumMobile.addEventListener("keyup", (e) => {
     if(!e.target.value){
@@ -272,6 +280,7 @@ inputNickNameMobile.addEventListener("keyup", (e) => {
         noneDisabledCheckboxMobile.forEach((check) => {
             check.disabled = false;
         });
+        repeatCheckMobile();
     }
 
     if(globalThis.flag[5]) {
@@ -316,6 +325,7 @@ inputPhoneNumMobile.addEventListener("keyup", (e) => {
         noneDisabledCheckboxMobile.forEach((check) => {
             check.disabled = false;
         });
+        repeatCheckMobile();
     }
 
     if(globalThis.flag[5]) {
@@ -361,6 +371,7 @@ inputCertificationNumMobile.addEventListener("keyup", (e) => {
         noneDisabledCheckboxMobile.forEach((check) => {
             check.disabled = false;
         });
+        repeatCheckMobile();
     }
 
     if(globalThis.flag[5]) {
