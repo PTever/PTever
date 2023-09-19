@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>장바구니 페이지</title>
+    <link rel="stylesheet" href="shoppingbasket.css">
+    <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/static/woff2/SUIT.css" rel="stylesheet">
+    <style>
+        /* CSS 스타일링 */
+        
+        body {
+            body {font-family: 'SUIT'}
+        }
+        .product {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .product img {
+            max-width: 80px; /* 이미지 최대 너비 제한 */
+            margin-right: 10px;
+        }
+        .product-info {
+            flex-grow: 1; /* 나머지 공간을 채우도록 설정 */
+        }
+        .quantity {
+            width: 40px; /* 수량 입력 필드 너비 조절 */
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>장바구니</h1>
+    <div class="product">
+        <img src="pteverIMG.jpg" alt="제품 1 이미지">
+        <div class="product-info">
+            <span>제품 1</span>
+            <input type="number" min="0" value="0" class="quantity">
+            <span class="price">0원</span>
+        </div>
+    </div>
+    <div class="product">
+        <img src="product2.jpg" alt="제품 2 이미지">
+        <div class="product-info">
+            <span>제품 2</span>
+            <input type="number" min="0" value="0" class="quantity">
+            <span class="price">0원</span>
+        </div>
+    </div>
+    <div class="product">
+        <img src="product3.jpg" alt="제품 3 이미지">
+        <div class="product-info">
+            <span>제품 3</span>
+            <input type="number" min="0" value="0" class="quantity">
+            <span class="price">0원</span>
+        </div>
+    </div>
+    <h2>총 가격: <span id="totalPrice">0원</span></h2>
+
+    <script>
+        // JavaScript 코드
+        const quantities = document.querySelectorAll('.quantity');
+        const prices = document.querySelectorAll('.price');
+        const totalPriceElement = document.getElementById('totalPrice');
+
+        // 제품 가격 설정
+        const productPrices = [10, 20, 30];
+
+        function updateTotalPrice() {
+            let total = 0;
+            for (let i = 0; i < quantities.length; i++) {
+                const quantity = parseInt(quantities[i].value);
+                const price = productPrices[i];
+                const productTotal = quantity * price;
+                prices[i].textContent = productTotal + "원";
+                total += productTotal;
+            }
+            totalPriceElement.textContent = total + "원";
+        }
+
+        for (let i = 0; i < quantities.length; i++) {
+            quantities[i].addEventListener('input', updateTotalPrice);
+        }
+
+        // 페이지 로드 시 초기 총 가격 업데이트
+        updateTotalPrice();
+    </script>
+</body>
+</html>
+
+
+
+
+
+

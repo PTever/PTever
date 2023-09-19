@@ -8,7 +8,35 @@ function selectAll(selectAll)  {
     })
   };
 
+// 장바구니
 
+
+ // JavaScript 코드
+ const quantities = document.querySelectorAll('.quantity');
+ const prices = document.querySelectorAll('.price');
+ const totalPriceElement = document.getElementById('totalPrice');
+
+ // 제품 가격 설정
+ const productPrices = [20000, 20000, 30000];
+
+ function updateTotalPrice() {
+     let total = 0;
+     for (let i = 0; i < quantities.length; i++) {
+         const quantity = parseInt(quantities[i].value);
+         const price = productPrices[i];
+         const productTotal = quantity * price;
+         prices[i].textContent = productTotal + "원";
+         total += productTotal;
+     }
+     totalPriceElement.textContent = total + "원";
+ }
+
+ for (let i = 0; i < quantities.length; i++) {
+     quantities[i].addEventListener('input', updateTotalPrice);
+ }
+
+ // 페이지 로드 시 초기 총 가격 업데이트
+ updateTotalPrice();
 
 
 
