@@ -9,12 +9,18 @@ function selectAll(selectAll)  {
   };
 
 // 장바구니
-
-
  // JavaScript 코드
  const quantities = document.querySelectorAll('.quantity');
  const prices = document.querySelectorAll('.price');
  const totalPriceElement = document.getElementById('totalPrice');
+
+ // input 창 클릭 시 페이지 새로고침되는 현상 방지
+quantities.forEach((input) => {
+    input.addEventListener("click", (e) => {
+        e.preventDefault();
+    });
+})
+
 
  // 제품 가격 설정
  const productPrices = [20000, 20000, 30000];
@@ -22,10 +28,10 @@ function selectAll(selectAll)  {
  function updateTotalPrice() {
      let total = 0;
      for (let i = 0; i < quantities.length; i++) {
-         const quantity = parseInt(quantities[i].value);
-         const price = productPrices[i];
-         const productTotal = quantity * price;
-         prices[i].textContent = productTotal + "원";
+         let quantity = parseInt(quantities[i].value);
+         let price = productPrices[i];
+         let productTotal = quantity * price;
+         prices[i].textContent = price + "원";
          total += productTotal;
      }
      totalPriceElement.textContent = total + "원";

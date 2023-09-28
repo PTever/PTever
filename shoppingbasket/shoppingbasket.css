@@ -798,3 +798,10 @@ transform: rotate(180deg);
   justify-content: space-between;
   margin-bottom: 10px;
 }
+
+/* input[type=number] 에서 화살표 숨기기 */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
